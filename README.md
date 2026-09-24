@@ -179,7 +179,19 @@ Traffic_terminology/
 
 引用时可写作：
 
-> 交通用语语料库（Traffic Terminology Corpus），CC BY 4.0。
+> 交通用语语料库（Traffic Terminology Corpus），https://github.com/Luz7818/traffic-terminology ，CC BY 4.0。
+
+BibTeX：
+
+```bibtex
+@misc{traffic_terminology_corpus_2026,
+  title  = {Traffic Terminology Corpus: Colloquial to Standard Traffic Engineering Terminology (Chinese--English)},
+  author = {Luz},
+  year   = {2026},
+  url    = {https://github.com/Luz7818/traffic-terminology},
+  note   = {807 terms, 2038 colloquial expressions, CC BY 4.0}
+}
+```
 
 ## 关于数据准确性
 
