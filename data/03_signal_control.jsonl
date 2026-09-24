@@ -47,7 +47,7 @@
 {"id": "SIG-0047", "term_zh": "红波", "term_en": "red wave", "category": "交通信号控制", "definition": "为截流防止下游溢出而有意使车队连续遇红灯的协调策略。", "colloquial": ["故意一路红灯", "截流波"], "related": ["绿波", "交叉口溢出"]}
 {"id": "SIG-0048", "term_zh": "相位差", "term_en": "offset", "category": "交通信号控制", "definition": "相邻路口同相位绿灯启亮时刻之差，是协调控制的核心参数。", "colloquial": ["路口之间差几秒", "时差"], "related": ["公共周期", "干线协调控制"]}
 {"id": "SIG-0049", "term_zh": "公共周期", "term_en": "common cycle length (network cycle time)", "category": "交通信号控制", "definition": "协调系统中所有路口统一采用的周期，通常取关键路口最佳周期。", "colloquial": ["统一周期", "大家一个周期"], "related": ["双周期", "相位差"]}
-{"id": "SIG-0050", "term_zh": "双周期", "term_en": "double cycle", "category": "交通信号控制", "definition": "小流量路口以公共周期的一半运行、每两个系统周期重复两次的协调方式。", "colloquial": ["半个周期跑两轮", "两轮配时才算走完一个循环", "周期跑两遍才回头"], "related": ["公共周期", "协调控制"]}
+{"id": "SIG-0050", "term_zh": "双周期", "term_en": "double cycle", "category": "交通信号控制", "definition": "小流量路口采用公共周期一半作为自身周期，因而在一个系统周期内完成两次放行的协调方式。", "colloquial": ["半个周期跑两轮", "两轮配时才算走完一个循环", "周期跑两遍才回头"], "related": ["公共周期", "协调控制"]}
 {"id": "SIG-0051", "term_zh": "时距图", "term_en": "time-space diagram", "category": "交通信号控制", "definition": "以距离为纵轴、时间为横轴绘制各路口信号状态以设计绿波的分析图。", "colloquial": ["绿波图", "时空图"], "related": ["绿波带", "相位差"]}
 {"id": "SIG-0052", "term_zh": "带速", "term_en": "progression speed", "category": "交通信号控制", "definition": "绿波设计所依据的车队行驶速度，按此速度行驶可连续通过绿波带。", "colloquial": ["绿波车速", "按多少速度开一路绿灯"], "related": ["绿波", "速度引导"]}
 {"id": "SIG-0053", "term_zh": "速度引导", "term_en": "speed guidance", "category": "交通信号控制", "definition": "向驾驶人提示通过前方路口所需车速的信息服务，配合绿波协调。", "colloquial": ["提示牌上的建议车速", "绿波速度提示"], "related": ["带速", "可变情报板"]}

@@ -1275,7 +1275,7 @@
     "term_zh": "行车道",
     "term_en": "carriageway / travel lane",
     "category": "道路与基础设施",
-    "definition": "供车辆行驶的车道总称，供单列车辆顺安全行驶的带状部分为一条行车道。",
+    "definition": "供车辆行驶的车道总称，其中供单列车辆顺序安全行驶的带状部分称为一条行车道。",
     "related": [
      "车道宽度",
      "机动车道"
@@ -1288,7 +1288,7 @@
     "term_zh": "行车道",
     "term_en": "carriageway / travel lane",
     "category": "道路与基础设施",
-    "definition": "供车辆行驶的车道总称，供单列车辆顺安全行驶的带状部分为一条行车道。",
+    "definition": "供车辆行驶的车道总称，其中供单列车辆顺序安全行驶的带状部分称为一条行车道。",
     "related": [
      "车道宽度",
      "机动车道"
@@ -1301,7 +1301,7 @@
     "term_zh": "行车道",
     "term_en": "carriageway / travel lane",
     "category": "道路与基础设施",
-    "definition": "供车辆行驶的车道总称，供单列车辆顺安全行驶的带状部分为一条行车道。",
+    "definition": "供车辆行驶的车道总称，其中供单列车辆顺序安全行驶的带状部分称为一条行车道。",
     "related": [
      "车道宽度",
      "机动车道"
@@ -8862,7 +8862,7 @@
     "term_zh": "双周期",
     "term_en": "double cycle",
     "category": "交通信号控制",
-    "definition": "小流量路口以公共周期的一半运行、每两个系统周期重复两次的协调方式。",
+    "definition": "小流量路口采用公共周期一半作为自身周期，因而在一个系统周期内完成两次放行的协调方式。",
     "related": [
      "公共周期",
      "协调控制"
@@ -8875,7 +8875,7 @@
     "term_zh": "双周期",
     "term_en": "double cycle",
     "category": "交通信号控制",
-    "definition": "小流量路口以公共周期的一半运行、每两个系统周期重复两次的协调方式。",
+    "definition": "小流量路口采用公共周期一半作为自身周期，因而在一个系统周期内完成两次放行的协调方式。",
     "related": [
      "公共周期",
      "协调控制"
@@ -8888,7 +8888,7 @@
     "term_zh": "双周期",
     "term_en": "double cycle",
     "category": "交通信号控制",
-    "definition": "小流量路口以公共周期的一半运行、每两个系统周期重复两次的协调方式。",
+    "definition": "小流量路口采用公共周期一半作为自身周期，因而在一个系统周期内完成两次放行的协调方式。",
     "related": [
      "公共周期",
      "协调控制"
@@ -13256,7 +13256,7 @@
     "term_zh": "阻塞密度",
     "term_en": "jam density",
     "category": "交通流与拥堵",
-    "definition": "车流停滞、走一步停一步时的最大密度。",
+    "definition": "交通流完全停滞、速度降为零时道路可容纳的最大车辆密度。",
     "related": [
      "临界密度",
      "严重拥堵"
@@ -13269,7 +13269,7 @@
     "term_zh": "阻塞密度",
     "term_en": "jam density",
     "category": "交通流与拥堵",
-    "definition": "车流停滞、走一步停一步时的最大密度。",
+    "definition": "交通流完全停滞、速度降为零时道路可容纳的最大车辆密度。",
     "related": [
      "临界密度",
      "严重拥堵"
@@ -13282,7 +13282,7 @@
     "term_zh": "阻塞密度",
     "term_en": "jam density",
     "category": "交通流与拥堵",
-    "definition": "车流停滞、走一步停一步时的最大密度。",
+    "definition": "交通流完全停滞、速度降为零时道路可容纳的最大车辆密度。",
     "related": [
      "临界密度",
      "严重拥堵"
@@ -17740,7 +17740,7 @@
     "term_zh": "电子不停车收费",
     "term_en": "electronic toll collection (ETC)",
     "category": "高速公路",
-    "definition": "以车载电子标签自动识别计费并直接扣费门架分段计费的收费技术体系。",
+    "definition": "以车载电子标签与路侧天线自动完成识别、计费与扣费，并可通过门架实现分段计费的收费技术体系。",
     "related": [
      "ETC车道",
      "ETC门架"
@@ -17753,7 +17753,7 @@
     "term_zh": "电子不停车收费",
     "term_en": "electronic toll collection (ETC)",
     "category": "高速公路",
-    "definition": "以车载电子标签自动识别计费并直接扣费门架分段计费的收费技术体系。",
+    "definition": "以车载电子标签与路侧天线自动完成识别、计费与扣费，并可通过门架实现分段计费的收费技术体系。",
     "related": [
      "ETC车道",
      "ETC门架"
@@ -17766,7 +17766,7 @@
     "term_zh": "电子不停车收费",
     "term_en": "electronic toll collection (ETC)",
     "category": "高速公路",
-    "definition": "以车载电子标签自动识别计费并直接扣费门架分段计费的收费技术体系。",
+    "definition": "以车载电子标签与路侧天线自动完成识别、计费与扣费，并可通过门架实现分段计费的收费技术体系。",
     "related": [
      "ETC车道",
      "ETC门架"
@@ -19234,7 +19234,7 @@
     "term_zh": "长陡纵坡",
     "term_en": "long steep downgrade",
     "category": "高速公路",
-    "definition": "连续长大下坡路段，需设避险车道并提示刹车检查。",
+    "definition": "纵坡陡、坡长大的路段，连续长大下坡尤需设置避险车道并提示检查制动。",
     "related": [
      "避险车道",
      "制动失效"
@@ -19247,7 +19247,7 @@
     "term_zh": "长陡纵坡",
     "term_en": "long steep downgrade",
     "category": "高速公路",
-    "definition": "连续长大下坡路段，需设避险车道并提示刹车检查。",
+    "definition": "纵坡陡、坡长大的路段，连续长大下坡尤需设置避险车道并提示检查制动。",
     "related": [
      "避险车道",
      "制动失效"
@@ -23981,7 +23981,7 @@
     "term_zh": "饮酒驾驶",
     "term_en": "driving after drinking",
     "category": "交通安全",
-    "definition": "血液酒精含量达到20mg/100ml的违法驾驶行为。",
+    "definition": "血液酒精含量达到20mg/100ml但不足80mg/100ml的违法驾驶行为。",
     "related": [
      "醉酒驾驶",
      "交通违法"
@@ -23994,7 +23994,7 @@
     "term_zh": "饮酒驾驶",
     "term_en": "driving after drinking",
     "category": "交通安全",
-    "definition": "血液酒精含量达到20mg/100ml的违法驾驶行为。",
+    "definition": "血液酒精含量达到20mg/100ml但不足80mg/100ml的违法驾驶行为。",
     "related": [
      "醉酒驾驶",
      "交通违法"
@@ -24876,7 +24876,7 @@
     ]
    }
   ],
-  "路上隆起的一道宽坎": [
+  "一段一段隔开铺的减速坎": [
    {
     "id": "SAFE-0050",
     "term_zh": "减速丘",

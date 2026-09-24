@@ -5,7 +5,7 @@
 {"id": "FWY-0005", "term_zh": "匝道收费站", "term_en": "ramp toll station / exit toll station", "category": "高速公路", "definition": "设于出入口匝道上按进出收费的站点。", "colloquial": ["出口小收费站", "上下高速的站"], "related": ["收费站", "出口匝道"]}
 {"id": "FWY-0006", "term_zh": "人工收费车道", "term_en": "manual toll lane (MTC)", "category": "高速公路", "definition": "由收费员操作收卡的半自动收费车道。", "colloquial": ["人工窗口", "人工通道", "拿卡通道"], "related": ["ETC车道", "收费站"]}
 {"id": "FWY-0007", "term_zh": "ETC车道", "term_en": "ETC lane", "category": "高速公路", "definition": "车载单元与路侧设备微波通信完成不停车收费的车道。", "colloquial": ["不停车收费道", "ETC通道"], "related": ["电子不停车收费", "收费站"]}
-{"id": "FWY-0008", "term_zh": "电子不停车收费", "term_en": "electronic toll collection (ETC)", "category": "高速公路", "definition": "以车载电子标签自动识别计费并直接扣费门架分段计费的收费技术体系。", "colloquial": ["ETC", "自动扣费", "不停车缴费"], "related": ["ETC车道", "ETC门架"]}
+{"id": "FWY-0008", "term_zh": "电子不停车收费", "term_en": "electronic toll collection (ETC)", "category": "高速公路", "definition": "以车载电子标签与路侧天线自动完成识别、计费与扣费，并可通过门架实现分段计费的收费技术体系。", "colloquial": ["ETC", "自动扣费", "不停车缴费"], "related": ["ETC车道", "ETC门架"]}
 {"id": "FWY-0009", "term_zh": "ETC门架", "term_en": "ETC gantry", "category": "高速公路", "definition": "沿主线分段设置、实现精确路径识别与分段计费的门架系统。", "colloquial": ["路上的门架子", "计费龙门架"], "related": ["电子不停车收费", "分段计费"]}
 {"id": "FWY-0010", "term_zh": "分段计费", "term_en": "segment-based tolling", "category": "高速公路", "definition": "按车辆实际行驶路径经各ETC门架分段累计通行费的方式。", "colloquial": ["按走了哪段收钱", "走了多少路收多少钱", "每段单独算一次账"], "related": ["ETC门架", "通行费"]}
 {"id": "FWY-0011", "term_zh": "通行费", "term_en": "toll / toll fee", "category": "高速公路", "definition": "车辆使用收费公路应缴纳的费用。", "colloquial": ["过路费", "高速费", "交多少钱"], "related": ["收费公路", "计重收费"]}
@@ -52,7 +52,7 @@
 {"id": "FWY-0052", "term_zh": "借道通行", "term_en": "contraflow / crossover traffic", "category": "高速公路", "definition": "借用对向车道维持通行的临时交通组织方式。", "colloquial": ["借对面道开", "逆行道借用"], "related": ["半幅封闭", "交通管制"]}
 {"id": "FWY-0053", "term_zh": "分流诱导", "term_en": "traffic diversion guidance", "category": "高速公路", "definition": "以标志、情报板与导航引导车辆提前驶离受阻路段的措施。", "colloquial": ["提前下高速绕行", "分流"], "related": ["交通管制", "可变情报板"]}
 {"id": "FWY-0054", "term_zh": "恶劣天气管控", "term_en": "adverse weather traffic management", "category": "高速公路", "definition": "雾、雪、冰等天气下的限速、限车型、间隔放行乃至封闭等分级管控。", "colloquial": ["大雾封路", "雪天管制"], "related": ["交通管制", "路面结冰"]}
-{"id": "FWY-0055", "term_zh": "长陡纵坡", "term_en": "long steep downgrade", "category": "高速公路", "definition": "连续长大下坡路段，需设避险车道并提示刹车检查。", "colloquial": ["长下坡", "连续大下坡"], "related": ["避险车道", "制动失效"], "standards": "JTG D20 公路路线设计规范"}
+{"id": "FWY-0055", "term_zh": "长陡纵坡", "term_en": "long steep downgrade", "category": "高速公路", "definition": "纵坡陡、坡长大的路段，连续长大下坡尤需设置避险车道并提示检查制动。", "colloquial": ["长下坡", "连续大下坡"], "related": ["避险车道", "制动失效"], "standards": "JTG D20 公路路线设计规范"}
 {"id": "FWY-0056", "term_zh": "避险车道", "term_en": "emergency escape ramp", "category": "高速公路", "definition": "设于长陡下坡、以碎石坡床使制动失效车辆减速停车的专用岔道。", "colloquial": ["紧急避险道", "刹车失灵缓冲道"], "related": ["长陡纵坡", "制动失效"], "standards": "JTG D81 公路交通安全设施设计规范"}
 {"id": "FWY-0057", "term_zh": "制动失效", "term_en": "brake failure", "category": "高速公路", "definition": "车辆制动系统因连续制动过热等原因失去制动效能的故障状态。", "colloquial": ["刹车失灵", "刹不住车"], "related": ["避险车道", "长陡纵坡"]}
 {"id": "FWY-0058", "term_zh": "隧道群", "term_en": "tunnel group", "category": "高速公路", "definition": "连续多座隧道组成的路段，通风照明与应急联动要求高。", "colloquial": ["连着好几个隧道", "一个接一个的隧道", "穿过去又是一条隧道"], "related": ["隧道", "隧道监控"]}

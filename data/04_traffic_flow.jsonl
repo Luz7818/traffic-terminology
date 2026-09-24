@@ -63,7 +63,7 @@
 {"id": "FLOW-0063", "term_zh": "路网容量", "term_en": "network capacity", "category": "交通流与拥堵", "definition": "给定服务水准下路网能承载的最大交通量。", "colloquial": ["整个网能装多少车", "这一片路加起来能吃多少车", "整个路网最多装多少"], "related": ["通行能力", "交通需求"]}
 {"id": "FLOW-0064", "term_zh": "基本图", "term_en": "fundamental diagram", "category": "交通流与拥堵", "definition": "流量-密度（或速度-流量）关系曲线，揭示交通流由畅通转向拥挤的机理。", "colloquial": ["流密关系图", "交通流基本图"], "related": ["交通流三参数", "临界密度"]}
 {"id": "FLOW-0065", "term_zh": "临界密度", "term_en": "critical density", "category": "交通流与拥堵", "definition": "流量达到最大值时的密度，超过后流量反而下降。", "colloquial": ["车多到流量开始掉头", "车密到流量最大的那一点", "再多反而过不了那么多车"], "related": ["基本图", "阻塞密度"]}
-{"id": "FLOW-0066", "term_zh": "阻塞密度", "term_en": "jam density", "category": "交通流与拥堵", "definition": "车流停滞、走一步停一步时的最大密度。", "colloquial": ["堵死时的密度", "车挤到完全不动时一公里多少辆", "堵死时路面塞满车的样子"], "related": ["临界密度", "严重拥堵"]}
+{"id": "FLOW-0066", "term_zh": "阻塞密度", "term_en": "jam density", "category": "交通流与拥堵", "definition": "交通流完全停滞、速度降为零时道路可容纳的最大车辆密度。", "colloquial": ["堵死时的密度", "车挤到完全不动时一公里多少辆", "堵死时路面塞满车的样子"], "related": ["临界密度", "严重拥堵"]}
 {"id": "FLOW-0067", "term_zh": "冲击波", "term_en": "shockwave (traffic shockwave)", "category": "交通流与拥堵", "definition": "不同密度车流状态分界面向上游传播的波，解释排队形成与消散。", "colloquial": ["堵车像波浪一样往后传", "停车波"], "related": ["基本图", "排队消散"]}
 {"id": "FLOW-0068", "term_zh": "起动波", "term_en": "start wave (acceleration wave)", "category": "交通流与拥堵", "definition": "绿灯启亮后车辆依次起步形成的向后传播的扰动波。", "colloquial": ["绿灯亮了前面动了后面才动", "前面一动后面才跟着动一阵一阵", "绿灯后启动传成一串"], "related": ["冲击波", "启动损失时间"]}
 {"id": "FLOW-0069", "term_zh": "幽灵拥堵", "term_en": "phantom traffic jam", "category": "交通流与拥堵", "definition": "无任何事件、仅由车流不稳定扰动放大形成的走走停停波动。", "colloquial": ["莫名其妙就堵了", "没事故也堵"], "related": ["冲击波", "交通流稳定性"]}

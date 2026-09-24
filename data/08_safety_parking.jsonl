@@ -18,7 +18,7 @@
 {"id": "SAFE-0018", "term_zh": "二次事故", "term_en": "secondary accident", "category": "交通安全", "definition": "在初始事故影响范围内再发生的事故，需及时示警与撤离。", "colloquial": ["又撞了", "接着又出事"], "related": ["三角警示牌", "清障救援"]}
 {"id": "SAFE-0019", "term_zh": "肇事逃逸", "term_en": "hit and run", "category": "交通安全", "definition": "发生事故后为逃避责任驾车或弃车逃离的行为。", "colloquial": ["跑了", "撞了就跑", "逃逸"], "related": ["事故认定", "缉查布控"], "standards": "中华人民共和国道路交通安全法"}
 {"id": "SAFE-0020", "term_zh": "醉酒驾驶", "term_en": "drunk driving (driving under the influence)", "category": "交通安全", "definition": "血液酒精含量达到或超过80mg/100ml的驾驶行为，构成危险驾驶罪。", "colloquial": ["醉驾", "喝多了开车"], "related": ["饮酒驾驶", "交通违法"], "standards": "GB 19522 车辆驾驶人员血液、呼气酒精含量阈值与检验"}
-{"id": "SAFE-0021", "term_zh": "饮酒驾驶", "term_en": "driving after drinking", "category": "交通安全", "definition": "血液酒精含量达到20mg/100ml的违法驾驶行为。", "colloquial": ["酒驾", "喝了点酒开车"], "related": ["醉酒驾驶", "交通违法"]}
+{"id": "SAFE-0021", "term_zh": "饮酒驾驶", "term_en": "driving after drinking", "category": "交通安全", "definition": "血液酒精含量达到20mg/100ml但不足80mg/100ml的违法驾驶行为。", "colloquial": ["酒驾", "喝了点酒开车"], "related": ["醉酒驾驶", "交通违法"]}
 {"id": "SAFE-0022", "term_zh": "吸毒驾驶", "term_en": "drugged driving", "category": "交通安全", "definition": "服用国家管制精神药品或麻醉药品后驾驶的行为。", "colloquial": ["毒驾", "吸完冰毒还开车", "碰了不该碰的东西还摸方向盘"], "related": ["交通违法", "驾驶证吊销"]}
 {"id": "SAFE-0023", "term_zh": "疲劳驾驶", "term_en": "fatigued driving", "category": "交通安全", "definition": "连续驾驶超过规定时长或睡眠不足状态下驾驶的违法行为。", "colloquial": ["困了还开车", "开太久瞌睡"], "related": ["疲劳驾驶提示", "货车停车区"], "standards": "中华人民共和国道路交通安全法实施条例"}
 {"id": "SAFE-0024", "term_zh": "分心驾驶", "term_en": "distracted driving", "category": "交通安全", "definition": "驾驶中从事使用手机等分散注意力活动的行为。", "colloquial": ["开车玩手机", "开车分神"], "related": ["交通违法", "驾驶人反应时间"]}
@@ -47,7 +47,7 @@
 {"id": "SAFE-0047", "term_zh": "事故现场", "term_en": "accident scene", "category": "交通安全", "definition": "事故发生后的原始现场，按规定需保护或快速撤离。", "colloquial": ["现场", "出事的地方"], "related": ["三角警示牌", "事故认定"]}
 {"id": "SAFE-0048", "term_zh": "三角警示牌", "term_en": "warning triangle", "category": "交通安全", "definition": "事故或故障后在车后按规定距离设置的反光警示装置。", "colloquial": ["三角牌", "警示三角架"], "related": ["二次事故", "事故现场"], "standards": "GB 19151 机动车用三角警告牌"}
 {"id": "SAFE-0049", "term_zh": "减速带", "term_en": "speed hump / speed bump", "category": "交通安全", "definition": "铺装于路面的条状凸起设施，迫使车辆减速，常设于学校与小区出入口。", "colloquial": ["减速坡", "颠簸带", "躺坡"], "related": ["减速丘", "减速标线"], "standards": "GB 51038 城市道路交通标志和标线设置规范"}
-{"id": "SAFE-0050", "term_zh": "减速丘", "term_en": "speed cushion", "category": "交通安全", "definition": "分块式凸起设施，在减速的同时减少对大型车与急救车的影响。", "colloquial": ["带豁口的减速带", "带豁口让自行车慢点过的那道坎", "路上隆起的一道宽坎"], "related": ["减速带"]}
+{"id": "SAFE-0050", "term_zh": "减速丘", "term_en": "speed cushion", "category": "交通安全", "definition": "分块式凸起设施，在减速的同时减少对大型车与急救车的影响。", "colloquial": ["带豁口的减速带", "带豁口让自行车慢点过的那道坎", "一段一段隔开铺的减速坎"], "related": ["减速带"]}
 {"id": "SAFE-0051", "term_zh": "爆闪警示灯", "term_en": "flashing warning beacon", "category": "交通安全", "definition": "以高频率闪烁警示危险地点的光学装置。", "colloquial": ["爆闪灯", "一闪一闪的黄灯"], "related": ["警示桩", "交叉口视距"]}
 {"id": "SAFE-0052", "term_zh": "警示桩", "term_en": "delineator post (warning post)", "category": "交通安全", "definition": "设于路侧危险段的反光柱桩，标示道路边界。", "colloquial": ["红白桩", "示警桩"], "related": ["轮廓标", "护栏"], "disambiguation": "「示警桩」指临崖、急弯等危险段单独设立、警示路界的桩柱时用本词条；沿行车道边缘连续布设标示线形的用 INTX-0078 轮廓标。"}
 {"id": "SAFE-0053", "term_zh": "凸面反光镜", "term_en": "convex traffic mirror", "category": "交通安全", "definition": "设于视距不足弯道或出入口扩大驾驶人视野的球面镜。", "colloquial": ["转弯的镜子", "路口大圆镜"], "related": ["视距", "急弯路段"]}
