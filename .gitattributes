@@ -1,0 +1,3 @@
+# 本仓库刻意不做换行符归一化：data/*.jsonl 与 web/data.js 是 CRLF，
+# scripts/*.py 与前端源文件是 LF。交给 git 转换会造成整文件假 diff。
+* -text
