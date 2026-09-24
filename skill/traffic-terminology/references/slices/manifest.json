@@ -1,0 +1,61 @@
+{
+ "note": "由 scripts/build_index.py 自动生成，请勿手工编辑。index 的值是候选词条 ID，正文见 entries。",
+ "slices": [
+  {
+   "prefix": "ROAD",
+   "category": "道路与基础设施",
+   "entries": 103,
+   "colloquial": 290,
+   "file": "slices/ROAD.json"
+  },
+  {
+   "prefix": "INTX",
+   "category": "交叉口与标志标线",
+   "entries": 96,
+   "colloquial": 237,
+   "file": "slices/INTX.json"
+  },
+  {
+   "prefix": "SIG",
+   "category": "交通信号控制",
+   "entries": 115,
+   "colloquial": 302,
+   "file": "slices/SIG.json"
+  },
+  {
+   "prefix": "FLOW",
+   "category": "交通流与拥堵",
+   "entries": 95,
+   "colloquial": 239,
+   "file": "slices/FLOW.json"
+  },
+  {
+   "prefix": "TRANSIT",
+   "category": "公共交通",
+   "entries": 101,
+   "colloquial": 254,
+   "file": "slices/TRANSIT.json"
+  },
+  {
+   "prefix": "FWY",
+   "category": "高速公路",
+   "entries": 90,
+   "colloquial": 219,
+   "file": "slices/FWY.json"
+  },
+  {
+   "prefix": "ITS",
+   "category": "智能交通",
+   "entries": 91,
+   "colloquial": 230,
+   "file": "slices/ITS.json"
+  },
+  {
+   "prefix": "SAFE",
+   "category": "交通安全",
+   "entries": 116,
+   "colloquial": 275,
+   "file": "slices/SAFE.json"
+  }
+ ]
+}

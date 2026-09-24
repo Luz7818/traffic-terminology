@@ -26,7 +26,8 @@ Traffic_terminology/
 ├── skill/traffic-terminology/
 │   ├── SKILL.md                     # 可直接投入使用的 AI Skill
 │   └── references/
-│       └── colloquial_index.json    # 口语→术语反向索引（脚本生成）
+│       ├── colloquial_index.json    # 口语→术语反向索引（脚本生成）
+│       └── slices/                  # 按领域切分的 8 个分片 + manifest.json
 └── scripts/
     ├── validate.py                  # 数据校验
     ├── build_index.py               # 生成反向索引与统计
@@ -114,8 +115,10 @@ python scripts/query.py --check     # 26 条内置回归用例，防召回退化
 将 `skill/traffic-terminology/` 目录整体复制到目标 AI 工具的 skills 目录即可。Skill 的工作方式：
 
 1. 从用户输入中识别口语化交通表述；
-2. 查询 `references/colloquial_index.json` 反向索引匹配标准术语；
+2. 查询 `references/colloquial_index.json` 反向索引匹配标准术语（`index` 给出候选词条 ID，正文在 `entries`）；
 3. 输出「标准术语 + 英文 + 定义 + 消歧说明」，未命中时按语义最近邻回退并标注置信度。
+
+索引是归一化结构：词条正文只存一份，所以整包 319 KB（同一份数据若按口语逐条展开会是 567 KB）。上下文预算紧张时可改读 `references/slices/` 下按领域切分的 8 个分片（每片 35–48 KB），先查 `slices/manifest.json` 决定加载哪片。注意有 12 组口语跨领域歧义（如「路牌」「充电桩」），领域不确定时仍应回查整包索引。
 
 ## 数据维护约定
 
