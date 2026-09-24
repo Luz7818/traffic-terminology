@@ -62,13 +62,14 @@ for filename in FILE_ORDER:
             idx = len(entries)
             entries.append(entry)
 
-            keys = set()
+            keys = []
             for c in rec["colloquial"]:
                 k = clean_phrase(c)
-                if k:
-                    keys.add(k)
+                if k and k not in keys:
+                    keys.append(k)
                     col_keys.add(k)
-            keys.add(rec["term_zh"])
+            if rec["term_zh"] not in keys:
+                keys.append(rec["term_zh"])
             for k in keys:
                 ids = phrase_map.setdefault(k, [])
                 if idx not in ids:
