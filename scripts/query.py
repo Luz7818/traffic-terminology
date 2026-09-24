@@ -67,11 +67,8 @@ def load_entries():
         with path.open(encoding="utf-8") as f:
             for line in f:
                 line = line.strip()
-                if not line:
-                    continue
-                rec = json.loads(line)
-                rec["_file"] = filename
-                entries.append(rec)
+                if line:
+                    entries.append(json.loads(line))
     return entries
 
 

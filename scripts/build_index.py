@@ -14,7 +14,6 @@
 """
 
 import json
-import shutil
 from collections import defaultdict
 from pathlib import Path
 
@@ -33,9 +32,6 @@ FILE_ORDER = [
     "07_its.jsonl",
     "08_safety_parking.jsonl",
 ]
-
-FIELDS = ("term_zh", "term_en", "category", "definition", "related", "disambiguation", "standards")
-
 
 def read_entries():
     out = []

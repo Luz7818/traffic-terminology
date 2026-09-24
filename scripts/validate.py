@@ -70,6 +70,7 @@ all_ids = Counter()
 term_zh_lookup = {}
 colloquial_map = defaultdict(list)
 disamb_ids = set()
+related_refs = []
 ambiguities_ok = 0
 total = 0
 
@@ -142,6 +143,10 @@ for filename, expected_prefix in FILE_PREFIX_MAP.items():
                             f"[标准] {loc} {num} 的名称应为「{canonical}」，实为「{std[len(num) + 1:].strip()}」")
                         break
 
+            rel = rec.get("related", [])
+            if isinstance(rel, list):
+                related_refs.extend((loc, r) for r in rel if isinstance(r, str))
+
 for rid, cnt in all_ids.items():
     if cnt > 1:
         errors.append(f"[ID] ID 重复 {cnt} 次: {rid}")
@@ -153,39 +158,11 @@ for te, cnt in all_terms_en.items():
         warnings.append(f"[术语] term_en 相同: {te}")
 
 # related 指向性检查（警告级）：允许命中任一词条的 term_zh / colloquial / term_en
-known_terms = set(term_zh_lookup)
-known_terms.update(colloquial_map.keys())
-known_en = set()
-for filename in FILE_PREFIX_MAP:
-    path = DATA_DIR / filename
-    if not path.exists():
-        continue
-    with path.open(encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                rec = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            known_en.add(rec.get("term_en", ""))
-for filename in FILE_PREFIX_MAP:
-    path = DATA_DIR / filename
-    if not path.exists():
-        continue
-    with path.open(encoding="utf-8") as f:
-        for lineno, line in enumerate(f, 1):
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                rec = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            for rel in rec.get("related", []):
-                if rel not in known_terms and rel not in known_en:
-                    warnings.append(f"[关联] {filename}:{lineno} related 未命中任何术语/口语/英文: {rel}")
+# 词表直接复用主循环已经收集的结果，不再重读一遍数据文件。
+known_terms = set(term_zh_lookup) | set(colloquial_map) | set(all_terms_en)
+for loc, rel in related_refs:
+    if rel not in known_terms:
+        warnings.append(f"[关联] {loc} related 未命中任何术语/口语/英文: {rel}")
 
 # 一词多义提示（口语说法映射到多个术语，属正常但需 disambiguation 字段说明取舍）
 for c, ids in sorted(colloquial_map.items()):
