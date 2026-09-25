@@ -67,7 +67,6 @@ warnings = []
 all_terms_zh = Counter()
 all_terms_en = Counter()
 all_ids = Counter()
-term_zh_lookup = {}
 colloquial_map = defaultdict(list)
 disamb_ids = set()
 related_refs = []
@@ -111,7 +110,6 @@ for filename, expected_prefix in FILE_PREFIX_MAP.items():
             tz = rec.get("term_zh")
             if tz:
                 all_terms_zh[tz] += 1
-                term_zh_lookup[tz] = rid
             te = rec.get("term_en")
             if te:
                 all_terms_en[te] += 1
@@ -125,10 +123,12 @@ for filename, expected_prefix in FILE_PREFIX_MAP.items():
                 if isinstance(v, str) and v != v.strip():
                     errors.append(f"[空白] {loc} {field} 首尾含空白字符: {v!r}")
 
-            for c in rec.get("colloquial", []) if isinstance(rec.get("colloquial"), list) else []:
-                if not isinstance(c, str) or not c.strip():
-                    errors.append(f"[口语] {loc} colloquial 含空项")
-                else:
+            colloquial = rec.get("colloquial")
+            if isinstance(colloquial, list):
+                for c in colloquial:
+                    if not isinstance(c, str) or not c.strip():
+                        errors.append(f"[口语] {loc} colloquial 含空项")
+                        continue
                     if c != c.strip():
                         errors.append(f"[空白] {loc} colloquial 首尾含空白字符: {c!r}")
                     colloquial_map[c].append(rec.get("id", "?"))
@@ -159,7 +159,7 @@ for te, cnt in all_terms_en.items():
 
 # related 指向性检查（警告级）：允许命中任一词条的 term_zh / colloquial / term_en
 # 词表直接复用主循环已经收集的结果，不再重读一遍数据文件。
-known_terms = set(term_zh_lookup) | set(colloquial_map) | set(all_terms_en)
+known_terms = set(all_terms_zh) | set(colloquial_map) | set(all_terms_en)
 for loc, rel in related_refs:
     if rel not in known_terms:
         warnings.append(f"[关联] {loc} related 未命中任何术语/口语/英文: {rel}")

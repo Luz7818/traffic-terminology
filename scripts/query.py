@@ -99,7 +99,10 @@ def score(entry, q):
 
 
 def run_check(entries):
-    """回归用例：断言每个查询词的首选命中未退化。用 ASCII 标记避免控制台编码问题。"""
+    """回归用例：断言每个查询词的首选命中未退化，返回失败用例数。
+
+    用 ASCII 标记避免控制台编码问题。
+    """
     failed = 0
     for q, want in CHECK_CASES:
         hits = [(s, e) for e in entries if (s := score(e, q)) is not None]
@@ -111,19 +114,17 @@ def run_check(entries):
             failed += 1
             print(f"FAIL  {q} -> 期望 {want}，实得 {got}")
     print(f"\n{len(CHECK_CASES) - failed}/{len(CHECK_CASES)} 用例通过")
-    sys.exit(1 if failed else 0)
+    return failed
 
 
 def main():
     args = sys.argv[1:]
-    verbose = False
-    if "-v" in args:
-        verbose = True
-        args = [a for a in args if a != "-v"]
+    verbose = "-v" in args
+    check = "--check" in args
+    args = [a for a in args if a not in ("-v", "--check")]
     entries = load_entries()
-    if "--check" in args:
-        run_check(entries)
-    args = [a for a in args if a != "--check"]
+    if check:
+        sys.exit(1 if run_check(entries) else 0)
     if not args:
         print(__doc__)
         sys.exit(1)
