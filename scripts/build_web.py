@@ -8,7 +8,6 @@
 
 import json
 import re
-from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -78,7 +77,6 @@ for filename in FILE_ORDER:
 
 payload = {
     "meta": {
-        "generated": str(date.today()),
         "entries": len(entries),
         "colloquial": len(col_keys),
     },

@@ -105,10 +105,12 @@ manifest = []
 for prefix in [s["prefix"] for s in stats["files"]]:
     recs = by_prefix[prefix]
     e, idx = build(recs)
+    # 一个文件可能含多个 category（08 同时收录交通安全与静态交通），按真实标签集合标注
+    category = " / ".join(sorted({r["category"] for r in recs}))
     with (SLICE_DIR / f"{prefix}.json").open("w", encoding="utf-8") as f:
-        json.dump({"note": payload["note"], "prefix": prefix, "category": recs[0]["category"],
+        json.dump({"note": payload["note"], "prefix": prefix, "category": category,
                    "entries": e, "index": idx}, f, ensure_ascii=False, indent=1)
-    manifest.append({"prefix": prefix, "category": recs[0]["category"],
+    manifest.append({"prefix": prefix, "category": category,
                      "entries": len(e), "colloquial": len(idx), "file": f"slices/{prefix}.json"})
 with (SLICE_DIR / "manifest.json").open("w", encoding="utf-8") as f:
     json.dump({"note": payload["note"], "slices": manifest}, f, ensure_ascii=False, indent=1)

@@ -52,7 +52,7 @@
   },
   {
    "prefix": "SAFE",
-   "category": "交通安全",
+   "category": "交通安全 / 静态交通（停车）",
    "entries": 116,
    "colloquial": 275,
    "file": "slices/SAFE.json"

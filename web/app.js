@@ -551,7 +551,7 @@
   var statsEl = document.getElementById('stats');
   [
     [DATA.meta.entries, '条术语'],
-    [DATA.meta.colloquial, '个口语说法'],
+    [DATA.meta.colloquial, '个口语匹配键'],
     [catList.length, '个领域'],
   ].forEach(function (s) {
     var chip = el('span', 'stat-chip');
@@ -561,7 +561,7 @@
     statsEl.appendChild(chip);
   });
   document.getElementById('foot-count').textContent =
-    DATA.meta.entries + ' 条术语 · ' + DATA.meta.colloquial + ' 个口语说法（更新于 ' + DATA.meta.generated + '）';
+    DATA.meta.entries + ' 条术语 · ' + DATA.meta.colloquial + ' 个口语匹配键（去括注后去重）';
 
   document.getElementById('btn-convert').addEventListener('click', convert);
   document.getElementById('btn-clear').addEventListener('click', function () {
