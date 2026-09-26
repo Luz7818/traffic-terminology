@@ -1,7 +1,7 @@
 # 给 AI 的项目说明
 
 > 用途：给 AI 编码助手。这里是事实与约束，不含介绍性文字。改动本仓库前先读这份。
-> README.md 与 docs/上手手册.md 里被引用的事实以本文件为准，它们只链接不复述。
+> README.md 与 docs/getting-started.md 里被引用的事实以本文件为准，它们只链接不复述。
 
 ## 一句话
 
@@ -30,7 +30,7 @@
 | `scripts/` | 校验、重建、查询、门禁 | 全部零依赖；`run_all.py` 是唯一的总入口 |
 | `web/` | 静态网页转换器 | `data.js` 是脚本产物；`app.js` 里有独立的匹配实现 |
 | `skill/traffic-terminology/` | 可直接安装的 AI Skill | `references/` 下全是脚本产物，可脱离 `data/` 独立使用 |
-| `docs/` | 上手手册 | `docs/上手手册.md` |
+| `docs/` | 上手手册 | `docs/getting-started.md` |
 
 ## 关键约定（违反会出问题的才列）
 

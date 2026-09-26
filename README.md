@@ -38,7 +38,7 @@ python scripts/query.py 红绿灯路口
 不想装环境：直接用浏览器打开 `web/index.html`，双击即可，不需要服务器和网络。
 
 完整用法（含作为 AI Skill 接入、往库里加一条术语）见
-[上手手册](docs/上手手册.md)。
+[上手手册](docs/getting-started.md)。
 
 ## 三个入口
 
