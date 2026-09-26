@@ -31,14 +31,14 @@ python -c "import json;print(max(json.loads(l)['id'] for l in open('data/03_sign
 | 字段 | 必填 | 约束（由 `scripts/validate.py` 强制） |
 |---|---|---|
 | `id` | ✓ | `<前缀>-<四位数字>`，前缀须与所在文件一致，全库唯一，删除后不复用 |
-| `term_zh` | ✓ | 全库唯一；不得有首尾空白 |
-| `term_en` | ✓ | 全库唯一；不得含中文字符或中文标点（校验强制） |
+| `term_zh` | ✓ | 全库唯一（重复报 error）；不得有首尾空白 |
+| `term_en` | ✓ | 不得含中文字符或中文标点（error）；两条术语共用同一英文只报 warning |
 | `category` | ✓ | 领域标签，需与文件覆盖的类别一致（校验目前不比对这一项，靠人工） |
 | `definition` | ✓ | 简明专业定义，不得有首尾空白 |
 | `colloquial` | ✓ | 列表，至少 1 项；全库现有 2038 个不同写法（复核：`python scripts/build_index.py`） |
 | `related` | ✗ | 列表，每项必须能解析为库内已存在的 `term_zh` 或口语说法，否则报 warning |
 | `standards` | ✗ | 单个字符串，格式「编号 名称」；编号若在登记表里，名称必须完全一致 |
-| `disambiguation` | 条件必填 | 该词条的口语说法与其他词条重叠时必须写，说明什么语境取哪个 |
+| `disambiguation` | 条件必填 | 该词条的口语说法与其他词条重叠时应写，说明什么语境取哪个。缺失记为 warning（不计入 error），但会让「警告 0 项」这个干净状态破掉 |
 
 ## 加词条的顺序
 

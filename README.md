@@ -16,8 +16,8 @@
 | 红绿灯路口 | 信号交叉口 | signalized intersection |
 | 加塞 | 违法变更车道 | illegal lane changing |
 | 堵死了 | 严重拥堵 | severe congestion |
-| 马路牙子 | 路缘石 | curb |
-| 一路绿灯 | 绿波协调控制 | green wave coordination |
+| 马路牙子（写作「道牙」「路牙」等） | 路缘石 | curb |
+| 绿波带 | 干线协调控制 | arterial coordination (green wave coordination) |
 | 凹进去的公交站 | 港湾式停靠站 | bus bay |
 
 ## 30 秒跑通

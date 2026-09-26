@@ -13,7 +13,7 @@ Skill 的作用是把「口语 → 标准术语」这件事交给模型时，给
 | `traffic-terminology/SKILL.md` | 技能说明与工作流程：识别口语表述 → 查索引 → 按消歧规则选择 → 按规定格式输出 | 含 8 个 ID 前缀的领域对照表与消歧规则 |
 | `traffic-terminology/references/colloquial_index.json` | 反向索引：`口语说法 → [词条 ID]`，加上一份 `entries` 正文表 | **脚本产物**，约 319 KB |
 | `traffic-terminology/references/slices/manifest.json` | 8 个分片的目录：前缀、类别、条数、文件名 | **脚本产物**，1.3 KB |
-| `traffic-terminology/references/slices/<前缀>.json` | ROAD / INTX / SIG / FLOW / TRANSIT / FWY / ITS / SAFE 各一片 | **脚本产物**，每片 35–48 KB |
+| `traffic-terminology/references/slices/<前缀>.json` | ROAD / INTX / SIG / FLOW / TRANSIT / FWY / ITS / SAFE 各一片 | **脚本产物**，每片 34.5–47.3 KB |
 
 ## 为什么索引要另存一份
 
