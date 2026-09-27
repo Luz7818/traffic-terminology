@@ -20,7 +20,8 @@ Windows 上如果命令输出是乱码，先执行 `set PYTHONIOENCODING=utf-8`�
 
 ### 2.1 手工查词、转换一段话（网页，最快）
 
-1. 双击打开 `web/index.html`（不需要启动服务器）。
+1. 双击打开 `web/index.html`（不需要启动服务器），或者直接用在线上版本
+   <https://luz7818.github.io/traffic-terminology/>——同一份文件，推 `master` 时由 CI 发布。
 2. 顶部两个标签：**口语转换** 与 **术语库**。
 3. 「口语转换」：把整段口语粘进输入框，按 `Ctrl+Enter` 或点「转换」。结果区给出
    术语化改写（命中的词高亮）、原文对照、以及每个术语的卡片（中英、定义、领域、
@@ -146,6 +147,8 @@ python scripts/query.py --check
 | `run_all.py` 中途 `[中止] 数据校验 失败（退出码 1）` | 数据不合法，索引和网页都没重建 | 按报错里的文件名与 ID 修数据，再重跑 |
 | 重建后 `git diff` 显示 `web/data.js` 变了 | 正常：数据确实变了。产物不含时间戳，不会有无意义的改动 | 把生成物和源数据一起提交 |
 | 转换结果把城市语境说成高速 | 网页消歧取第一个候选 | 用 Skill，或在 `-v` 结果里人工确认 |
+| 线上演示页文字都在、点什么都没反应，控制台里 `data.js` / `app.js` 是 404 | 访问地址少了末尾斜杠（`/traffic-terminology`），相对路径的基准变成站点根 | 用带斜杠的 `https://luz7818.github.io/traffic-terminology/`；GitHub Pages 会自动补这个斜杠，别把链接改成不带斜杠的 |
+| 推 `master` 后发布工作流红在 `Run actions/configure-pages@v5`，报 `Error: Get Pages site failed. Please verify that the repository has Pages enabled and configured to build using GitHub Actions` | 这个仓的 Pages 还没开过，而 workflow 的 token 也没有开启它的权限 | 到 `Settings → Pages → Source` 选 **GitHub Actions**（人工点一次即可），再重跑工作流；细节见 `AGENTS.md` 关键约定 11 |
 
 ## 6. 术语小词典
 

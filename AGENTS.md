@@ -18,7 +18,8 @@
 | 查询回归 | 26/26 用例通过 | `python scripts/query.py --check` |
 | 标准登记表 | 23 条编号与名称对应 | `python scripts/validate.py`（读 `STANDARDS_REGISTRY`） |
 | 第三方依赖 | 无（只用标准库） | `python scripts/run_all.py` |
-| CI | 无工作流；门禁就是上一条那行命令 | `python scripts/run_all.py` |
+| CI | 只有一个发布工作流：推 `master` 把 `web/` 原样发到 GitHub Pages（无构建步骤）。数据与回归门禁仍只在本地跑 | `ls .github/workflows`、`python scripts/run_all.py` |
+| 在线演示 | https://luz7818.github.io/traffic-terminology/ （项目页路径由仓库名决定，不是 `/corpus/`） | `curl -s -o /dev/null -w '%{http_code}' https://luz7818.github.io/traffic-terminology/data.js` 得 200 |
 | 网页匹配键数 | 2036 个（去括注后去重口径） | `python scripts/build_web.py` |
 | 原始口语去重数 | 2038 条（另一口径，见「约定」第 5 条） | `python scripts/build_index.py` |
 
@@ -69,6 +70,18 @@
    落在 `/corpus`（少斜杠）时基准变成站点根，三者全 404，表现是页面文字都在但转换点不动。
    `python -m http.server` 与 GitHub Pages 会自动补斜杠，Vercel 的 Next 预设默认相反，
    所以收录方 luzzz.me 用 `trailingSlash: true` 把方向反过来（复核见其 `AGENTS.md` 关键约定 9）。
+
+11. **Pages 发布有两个不显然的点**：① `web/` 是零构建的静态目录，所以 workflow 里没有
+   `npm run build`，直接把目录当 artifact 上传；改名或加构建步骤要同步改
+   `.github/workflows/pages.yml` 的 `path`。② **GitHub Pages 必须在仓库 Settings → Pages
+   里人工开启一次（Source 选 GitHub Actions），workflow 的 token 开不了**：未开启时
+   `configure-pages` 报 `Error: Get Pages site failed. Please verify that the repository has
+   Pages enabled and configured to build using GitHub Actions`；给它加 `enablement: true`
+   也只是换成 `Error: Create Pages site failed. Error: Resource not accessible by integration`
+   （两段都是 2026-09-27 的 CI 实录，当时就是这么卡住第一次发布的）。
+   另外未登录时 `GET /repos/Luz7818/traffic-terminology/pages` 恒返回 404，
+   连已开启的 marx-cloud 也一样，别拿它当判据 —— 判据是站点本体：
+   `curl -s -o /dev/null -w '%{http_code}' https://luz7818.github.io/traffic-terminology/` 为 200。
 
 ## 改动后的验证
 

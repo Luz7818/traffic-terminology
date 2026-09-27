@@ -41,9 +41,10 @@
 ## 和谁打交道
 
 - **上游**：`data/*.jsonl` → `scripts/build_web.py` → `data.js`。
-- **下游**：使用者浏览器；`skill/` 不依赖这里。个人站 `luzzz.me` 的 `/corpus/` 子页面是这
-  四个文件的原样副本（`index.html` `style.css` `app.js` `data.js`），由 luzzz 仓库的
-  `tools/sync-showcases.mjs` 复制过去，本目录改动不会被反向覆盖。
+- **下游**：使用者浏览器；`skill/` 不依赖这里。两处收录都只是**复制**这四个文件：
+  GitHub Pages 的 <https://luz7818.github.io/traffic-terminology/>（`.github/workflows/pages.yml`
+  推 `master` 时发布），以及个人站 `luzzz.me` 的 `/corpus/` 子页面
+  （由 luzzz 仓库的 `tools/sync-showcases.mjs` 复制）。本目录改动不会被它们反向覆盖。
 - **改了这里之后**：网页侧没有自动化用例，需要手动复测；如果同时动了匹配逻辑，
   还要对齐 `scripts/query.py` 那一侧，否则命令行与网页会给出不同结果。
 

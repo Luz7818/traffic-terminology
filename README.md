@@ -11,6 +11,10 @@
 
 **规模**：807 条术语 · 2038 个口语说法 · 9 类领域 · 中英对照（复核：`python scripts/validate.py`）
 
+**在线演示**：<https://luz7818.github.io/traffic-terminology/>（就是 `web/` 这四个文件，
+由 CI 在推 `master` 时发布；这份表也可以离线用，双击本仓 `web/index.html` 即可，复核：
+`curl -s -o /dev/null -w '%{http_code}' https://luz7818.github.io/traffic-terminology/data.js` 得 200）
+
 | 口语说法 | 标准术语 | English |
 |---|---|---|
 | 红绿灯路口 | 信号交叉口 | signalized intersection |
