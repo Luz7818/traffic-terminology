@@ -56,3 +56,38 @@ python -c "import json;print(max(json.loads(l)['id'] for l in open('data/03_sign
 - **下游**：`scripts/build_index.py` → `skill/traffic-terminology/references/`；
   `scripts/build_web.py` → `web/data.js`；`scripts/query.py` 与 `scripts/validate.py` 直接读这里。
 - **改这里之后要跑**：`python scripts/run_all.py`。
+
+## 别动
+
+- **`web/data.js` 与 `skill/traffic-terminology/references/` 下的索引和分片都是这里的产物**：
+  直接改它们看着最快，下一次 `python scripts/run_all.py` 会整文件覆盖（AGENTS.md 关键约定 1）。
+- **产物里不许加时间戳**：`build_web.py` 的 `meta` 只有 `entries` 与 `colloquial` 两个键。
+  曾写过 `generated: date.today()`，每次重建都出幻影 diff（判据：下面 D-2）。
+- **ID 删除后永久作废、不得复用**：分片与 `related` 都按 ID 寻址，复用旧号会让历史引用
+  指向另一条术语（AGENTS.md 关键约定 3）。当前无空洞，判据见下面 D-1。
+- **7 项与 `term_zh` 完全相同的自引用不是笔误**：反向索引只按 `colloquial` 建键，
+  删掉一项这个术语在 Skill 侧就查不到（复核：A 组）。
+- **1620 项 `related` 是引用而不是标签**：删一条术语只会让指向它的引用降级成 warning，
+  所以要看「警告 0 项」而不是只看「错误 0 项」（复核：B 组与 `python scripts/validate.py`）。
+- **2038 与 2036 两个口语计数都要留着**：差值是「地道（部分场合）」「闪黄灯（口误）」
+  两组括注并入主形，别为"统一口径"去删括注（AGENTS.md 关键约定 6）。
+- **别顺手统一行尾**：本目录 8 个 `.jsonl` 是 CRLF、`scripts/*.py` 是 LF，
+  `.gitattributes` 里的 `* -text` 就是不让 git 去转（复核：C 组）。
+
+五条命令都在仓库根执行，注释写在每条上方，是它的预期输出：
+
+```bash
+# A：输出 7
+python -c "import json,glob;print(sum(json.loads(l)['term_zh'] in json.loads(l)['colloquial'] for g in sorted(glob.glob('data/*.jsonl')) for l in open(g,encoding='utf-8') if l.strip()))"
+# B：输出 1620
+python -c "import json,glob;print(sum(len(json.loads(l).get('related',[])) for g in sorted(glob.glob('data/*.jsonl')) for l in open(g,encoding='utf-8') if l.strip()))"
+# C：输出 103 与 0（数据文件带 CR、脚本不带）
+python -c "print([(p,open(p,'rb').read().count(b'\r\n')) for p in ['data/01_road_infrastructure.jsonl','scripts/build_index.py']])"
+# D-1：八行，每行「条数 = 该前缀最大 ID 序号」，相等即没有空洞
+python -c "import json,glob;[print(p,sum(1 for l in open(p,encoding='utf-8') if l.strip()),max(int(json.loads(l)['id'].rsplit('-',1)[1]) for l in open(p,encoding='utf-8') if l.strip())) for p in sorted(glob.glob('data/*.jsonl'))]"
+# D-2：重建两份产物之后 git status 里不出现 web/data.js 与 references 行，即产物字节未变
+python scripts/build_index.py && python scripts/build_web.py && git status --porcelain
+```
+
+上面「2038 与 2036」那两个口语计数另有现成口径：`python scripts/build_index.py` 打印 2038
+（原始写法去重），`python scripts/build_web.py` 打印 2036（去括注后的网页匹配键）。
