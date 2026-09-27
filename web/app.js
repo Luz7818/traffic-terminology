@@ -583,4 +583,15 @@
   buildCatChips();
   doSearch();
   renderHistory();
+
+  // 回链只在「确实有上一级站点」时保留：file: 下上一级只是本地目录，
+  // 而本站跑在根路径时 ../ 解析回来就是本页自己，点了等于刷新
+  var backEl = document.querySelector('.back');
+  if (backEl) {
+    var strip = function (p) { return p.replace(/index\.html$/, ''); };
+    var up = strip(new URL('../', location.href).pathname);
+    if (!/^https?:$/.test(location.protocol) || up === strip(location.pathname)) {
+      backEl.parentNode.removeChild(backEl);
+    }
+  }
 })();
