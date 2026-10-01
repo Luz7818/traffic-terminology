@@ -13,7 +13,7 @@
 {"id": "TRANSIT-0013", "term_zh": "站距", "term_en": "stop spacing", "category": "公共交通", "definition": "相邻停靠站之间的距离，影响乘客步行与车辆运行速度。", "colloquial": ["站与站隔多远", "一站地多长"], "related": ["站点覆盖率", "大站快车"]}
 {"id": "TRANSIT-0014", "term_zh": "候车亭", "term_en": "bus shelter", "category": "公共交通", "definition": "站点上供乘客遮阳避雨的亭式设施。", "colloquial": ["公交站台亭子", "候车棚"], "related": ["公交停靠站", "电子站牌"]}
 {"id": "TRANSIT-0015", "term_zh": "电子站牌", "term_en": "electronic bus stop sign", "category": "公共交通", "definition": "实时显示来车信息与到站预报的站点显示设施。", "colloquial": ["会显示还有几站的牌子", "站台上那块会报车的屏", "显示车还有几分钟到的牌子"], "related": ["到站预报", "候车亭"]}
-{"id": "TRANSIT-0016", "term_zh": "到站预报", "term_en": "bus arrival prediction", "category": "公共交通", "definition": "基于车辆定位预测公交到站时间的信息服务。", "colloquial": ["还有几分钟到", "车到哪了"], "related": ["电子站牌", "车辆定位"]}
+{"id": "TRANSIT-0016", "term_zh": "到站预报", "term_en": "bus arrival prediction", "category": "公共交通", "definition": "基于车辆定位预测公交到站时间的信息服务。", "colloquial": ["还有几分钟到", "车到哪了"], "related": ["电子站牌", "车辆定位"], "surface": {"车到哪了": "公交到站预报信息"}}
 {"id": "TRANSIT-0017", "term_zh": "发车间隔", "term_en": "headway / dispatch interval", "category": "公共交通", "definition": "相邻两班次车辆发车或到站的时间间隔。", "colloquial": ["多久一班车", "车间隔", "几分钟一班"], "related": ["发车频率", "最小行车间隔"], "standards": "CJJ/T 119 城市公共交通工程术语标准"}
 {"id": "TRANSIT-0018", "term_zh": "发车频率", "term_en": "service frequency", "category": "公共交通", "definition": "单位时间内的发车班次数。", "colloquial": ["一小时几班", "班次密度"], "related": ["发车间隔", "高峰加车"]}
 {"id": "TRANSIT-0019", "term_zh": "班次", "term_en": "service run / scheduled trip", "category": "公共交通", "definition": "按行车计划编排的单趟运行车次。", "colloquial": ["一天多少班", "这班车"], "related": ["发车频率", "行车计划"]}
@@ -23,7 +23,7 @@
 {"id": "TRANSIT-0023", "term_zh": "运营时间", "term_en": "service hours", "category": "公共交通", "definition": "线路每日提供服务的起止时间范围。", "colloquial": ["几点到几点有车", "这条线头班车末班车之间那段", "几点有车到几点收车"], "related": ["末班车", "夜班公交"]}
 {"id": "TRANSIT-0024", "term_zh": "夜班公交", "term_en": "night bus service", "category": "公共交通", "definition": "在深夜时段运营的公交线路。", "colloquial": ["夜班车", "半夜的公交"], "related": ["运营时间", "定制公交"]}
 {"id": "TRANSIT-0025", "term_zh": "高峰加车", "term_en": "peak service augmentation", "category": "公共交通", "definition": "高峰时段加密班次、增投车辆的运营措施。", "colloquial": ["高峰多开车", "加开班次"], "related": ["发车频率", "行车计划"]}
-{"id": "TRANSIT-0026", "term_zh": "满载率", "term_en": "load factor", "category": "公共交通", "definition": "车厢载客量与额定载客量之比，超过一定限值即拥挤。", "colloquial": ["挤不挤", "车挤满了", "满员率"], "related": ["断面客流量", "运力配置"], "standards": "CJJ/T 119 城市公共交通工程术语标准"}
+{"id": "TRANSIT-0026", "term_zh": "满载率", "term_en": "load factor", "category": "公共交通", "definition": "车厢载客量与额定载客量之比，超过一定限值即拥挤。", "colloquial": ["挤不挤", "车挤满了", "满员率"], "related": ["断面客流量", "运力配置"], "standards": "CJJ/T 119 城市公共交通工程术语标准", "surface": {"车挤满了": "满载"}}
 {"id": "TRANSIT-0027", "term_zh": "断面客流量", "term_en": "link passenger volume", "category": "公共交通", "definition": "单位时间通过线路某断面的客流量，最大者为高峰最大断面。", "colloquial": ["最挤那一段的客流", "最挤那一截上有多少人", "一趟车某一段的乘客数"], "related": ["满载率", "客流走廊"]}
 {"id": "TRANSIT-0028", "term_zh": "客流量", "term_en": "passenger volume", "category": "公共交通", "definition": "单位时间乘坐公共交通的乘客数量。", "colloquial": ["客流", "多少人坐车"], "related": ["断面客流量", "客流预测"]}
 {"id": "TRANSIT-0029", "term_zh": "客流预测", "term_en": "passenger demand forecast", "category": "公共交通", "definition": "对新线或既有线路未来客流规模与分布的预估。", "colloquial": ["预测多少人坐", "提前估今后每年多少人坐", "算这条线以后挤不挤"], "related": ["客流量", "四阶段法"]}
@@ -43,7 +43,7 @@
 {"id": "TRANSIT-0043", "term_zh": "城际铁路", "term_en": "intercity railway", "category": "公共交通", "definition": "连接相邻城市、以城际客流为主的铁路。", "colloquial": ["城际", "城铁"], "related": ["高速铁路", "市域铁路"]}
 {"id": "TRANSIT-0044", "term_zh": "高速铁路", "term_en": "high-speed railway", "category": "公共交通", "definition": "设计速度250公里及以上的旅客列车专用铁路。", "colloquial": ["高铁", "动车（口误）", "坐高铁"], "related": ["城际铁路", "磁浮交通"]}
 {"id": "TRANSIT-0045", "term_zh": "磁浮交通", "term_en": "maglev transit", "category": "公共交通", "definition": "利用电磁力悬浮导向的轨道运输方式。", "colloquial": ["磁悬浮", "磁浮列车"], "related": ["高速铁路", "轨道交通"]}
-{"id": "TRANSIT-0046", "term_zh": "换乘", "term_en": "transfer", "category": "公共交通", "definition": "乘客在线路或方式之间转换车辆继续出行的行为。", "colloquial": ["倒车", "转车", "换车", "换乘一下"], "related": ["换乘站", "换乘系数"], "standards": "CJJ/T 119 城市公共交通工程术语标准"}
+{"id": "TRANSIT-0046", "term_zh": "换乘", "term_en": "transfer", "category": "公共交通", "definition": "乘客在线路或方式之间转换车辆继续出行的行为。", "colloquial": ["倒趟车（换乘车）", "转车", "换车", "换乘一下"], "related": ["换乘站", "换乘系数"], "standards": "CJJ/T 119 城市公共交通工程术语标准"}
 {"id": "TRANSIT-0047", "term_zh": "换乘站", "term_en": "interchange station", "category": "公共交通", "definition": "供乘客在两条及以上线路间转换的车站。", "colloquial": ["换成大站", "枢纽站（口语）"], "related": ["换乘", "综合客运枢纽"]}
 {"id": "TRANSIT-0048", "term_zh": "换乘系数", "term_en": "transfer coefficient", "category": "公共交通", "definition": "客运量与出行量之比，反映乘客平均换乘次数加一。", "colloquial": ["平均要倒几次车", "坐一趟车平均要倒几回", "一次出行换乘的次数"], "related": ["换乘", "线网"]}
 {"id": "TRANSIT-0049", "term_zh": "综合客运枢纽", "term_en": "comprehensive passenger transport hub", "category": "公共交通", "definition": "多种交通方式与多条线路集中换乘的大型综合设施。", "colloquial": ["交通枢纽", "大枢纽站", "客运枢纽"], "related": ["换乘站", "综合交通"]}
@@ -63,7 +63,7 @@
 {"id": "TRANSIT-0063", "term_zh": "微循环公交", "term_en": "microcirculation feeder bus", "category": "公共交通", "definition": "深入社区街巷、接驳干线交通的短线小型公交。", "colloquial": ["社区巴士", "接驳小巴", "微公交"], "related": ["接驳", "需求响应式公交"]}
 {"id": "TRANSIT-0064", "term_zh": "接驳", "term_en": "feeder connection", "category": "公共交通", "definition": "以短途线路连接干线站点与周边客源的运输组织。", "colloquial": ["摆渡过去", "接驳车", "转一次"], "related": ["微循环公交", "停车换乘"]}
 {"id": "TRANSIT-0065", "term_zh": "停车换乘", "term_en": "park and ride (P+R)", "category": "公共交通", "definition": "在轨道或枢纽站周边驻车换乘公共交通的出行组织方式。", "colloquial": ["P+R", "开车去地铁站停车站换地铁", "驻车换乘"], "related": ["接驳", "绿色出行"]}
-{"id": "TRANSIT-0066", "term_zh": "巡游出租车", "term_en": "cruising taxi", "category": "公共交通", "definition": "以巡游揽客与站点候客方式营运的出租汽车。", "colloquial": ["出租车", "打的", "的士", "打车"], "related": ["网约车", "出租汽车候客点"]}
+{"id": "TRANSIT-0066", "term_zh": "巡游出租车", "term_en": "cruising taxi", "category": "公共交通", "definition": "以巡游揽客与站点候客方式营运的出租汽车。", "colloquial": ["出租车", "打的", "的士", "打车"], "related": ["网约车", "出租汽车候客点"], "surface": {"的士": "出租车"}}
 {"id": "TRANSIT-0067", "term_zh": "网约车", "term_en": "ride-hailing service", "category": "公共交通", "definition": "经互联网平台预约调度、由注册车辆提供的客运服务。", "colloquial": ["滴滴打车（泛称）", "叫车软件", "网上叫车"], "related": ["巡游出租车", "合乘"]}
 {"id": "TRANSIT-0068", "term_zh": "顺风车", "term_en": "peer-to-peer ridesharing", "category": "公共交通", "definition": "私家车主顺路分摊成本的合乘出行服务。", "colloquial": ["捎人", "顺路带人", "顺风拼车"], "related": ["合乘", "网约车"]}
 {"id": "TRANSIT-0069", "term_zh": "合乘", "term_en": "carpooling", "category": "公共交通", "definition": "多人共乘一辆车分摊出行的方式，也称拼车。", "colloquial": ["拼车", "多人一车"], "related": ["多乘员车道", "顺风车"]}
@@ -71,7 +71,7 @@
 {"id": "TRANSIT-0071", "term_zh": "共享电单车", "term_en": "shared e-bike", "category": "公共交通", "definition": "互联网租赁电动自行车服务。", "colloquial": ["共享电动车", "扫电动车"], "related": ["共享单车", "非机动车道"]}
 {"id": "TRANSIT-0072", "term_zh": "电子围栏", "term_en": "electronic fence (geofence)", "category": "公共交通", "definition": "以定位技术限定共享单车停放虚拟范围的管理手段。", "colloquial": ["只能在框里还车", "停放围栏"], "related": ["共享单车", "违法停车"]}
 {"id": "TRANSIT-0073", "term_zh": "出行即服务", "term_en": "Mobility as a Service (MaaS)", "category": "公共交通", "definition": "以统一平台整合多种方式提供门到门一体化出行服务的新模式。", "colloquial": ["MaaS", "一个App搞定所有出行"], "related": ["一站式出行服务", "绿色出行"]}
-{"id": "TRANSIT-0074", "term_zh": "一站式出行服务", "term_en": "integrated mobility service", "category": "公共交通", "definition": "整合查询、规划、支付于一体的出行服务平台功能。", "colloquial": ["一次查完换乘车费", "一个手机把公交地铁打车全查了", "一次查清楚怎么换乘花多少钱"], "related": ["出行即服务", "路径规划"]}
+{"id": "TRANSIT-0074", "term_zh": "一站式出行服务", "term_en": "integrated mobility service", "category": "公共交通", "definition": "整合查询、规划、支付于一体的出行服务平台功能。", "colloquial": ["一次查完换乘车费", "一个手机把公交地铁打车全查了", "一次查清楚怎么换乘花多少钱"], "related": ["出行即服务", "路径规划"], "surface": {"一个手机把公交地铁打车全查了": "一个手机就能完成公交地铁打车查询（一站式出行服务）"}}
 {"id": "TRANSIT-0075", "term_zh": "公交都市", "term_en": "transit metropolis", "category": "公共交通", "definition": "以公共交通为主导支撑城市发展的建设模式与示范创建。", "colloquial": ["公交城市示范", "把公交摆在优先位置来建的城市", "国家试点公交先行的城市"], "related": ["公交优先", "公交出行分担率"]}
 {"id": "TRANSIT-0076", "term_zh": "公交出行分担率", "term_en": "public transit mode share", "category": "公共交通", "definition": "公共交通承担的出行量占全方式出行量的比例。", "colloquial": ["公交分担率", "多少人坐公交出行"], "related": ["方式划分"], "disambiguation": "「公交分担率」作为公共交通单项考核指标出现时用本词条；与其他出行方式并列比较的结构分析用 FLOW-0056 方式划分。"}
 {"id": "TRANSIT-0077", "term_zh": "绿色出行", "term_en": "green travel", "category": "公共交通", "definition": "以步行、骑行与公共交通为主的低碳出行方式。", "colloquial": ["低碳出行", "环保出行"], "related": ["公交出行分担率", "慢行交通"]}
@@ -99,3 +99,13 @@
 {"id": "TRANSIT-0099", "term_zh": "运营安全应急处置", "term_en": "transit emergency response", "category": "公共交通", "definition": "公共交通运营中故障、伤亡等突发事件的应急组织程序。", "colloquial": ["地铁故障应急", "车坏在半路怎么疏散人", "地铁出事时那一套应对流程"], "related": ["大客流", "应急预案"]}
 {"id": "TRANSIT-0100", "term_zh": "公交信息化监管平台", "term_en": "transit operation supervision platform", "category": "公共交通", "definition": "对公交车辆、客流与服务质量进行监测监管的信息系统。", "colloquial": ["公交监管系统", "主管部门盯着公交跑得怎样的系统", "管着全城公交车的那个后台"], "related": ["公交实时调度", "交通大数据"]}
 {"id": "TRANSIT-0101", "term_zh": "综合交通", "term_en": "comprehensive transportation", "category": "公共交通", "definition": "多种运输方式在基础设施、运营组织与信息服务层面协同衔接的一体化交通体系。", "colloquial": ["各种交通方式一块儿规划", "大交通体系"], "related": ["综合客运枢纽", "换乘站"]}
+{"id": "TRANSIT-0102", "term_zh": "摆渡车", "term_en": "shuttle bus", "category": "公共交通", "definition": "在固定几点间往返、短途接驳乘客的巴士。", "colloquial": ["摆渡车", "免费摆渡车", "航站楼接驳车"], "related": ["接驳", "机场巴士"]}
+{"id": "TRANSIT-0103", "term_zh": "停站时间", "term_en": "dwell time", "category": "公共交通", "definition": "车辆在站点停靠供乘客上下车所占用的时间。", "colloquial": ["停站时间", "上下客耽误的时间"], "related": ["发车间隔", "候车亭"]}
+{"id": "TRANSIT-0104", "term_zh": "准点率", "term_en": "on-time performance", "category": "公共交通", "definition": "按时刻表正点到发的班次占总班次的比例。", "colloquial": ["准点率", "正点率", "车准不准点"], "related": ["行车计划", "发车间隔"], "surface": {"车准不准点": "准点率高不高"}}
+{"id": "TRANSIT-0105", "term_zh": "换乘距离", "term_en": "transfer walking distance", "category": "公共交通", "definition": "换乘时两线路站台或出入口之间的步行距离。", "colloquial": ["换乘距离", "换乘走多远"], "related": ["换乘", "换乘站"], "surface": {"换乘走多远": "换乘距离有多远"}}
+{"id": "TRANSIT-0106", "term_zh": "轨道交通出入口", "term_en": "metro entrance and exit", "category": "公共交通", "definition": "轨道交通车站连接地面的出入口，常以字母或数字编号。", "colloquial": ["轨道交通出入口", "地铁口", "A口B口C口", "地铁出入口"], "related": ["地铁", "站台"]}
+{"id": "TRANSIT-0107", "term_zh": "公交线网优化", "term_en": "transit network optimization", "category": "公共交通", "definition": "对公交线路走向、站点布设与运力配置进行的系统性调整。", "colloquial": ["公交线网优化", "公交调线", "线路调整"], "related": ["公交线网", "线网密度"]}
+{"id": "TRANSIT-0108", "term_zh": "轮渡", "term_en": "ferry", "category": "公共交通", "definition": "用船舶在江、河两岸间往返运送乘客与车辆的公共交通方式。", "colloquial": ["轮渡", "过江轮渡"], "related": ["公共交通", "首末站"]}
+{"id": "TRANSIT-0109", "term_zh": "城乡公交", "term_en": "rural-urban bus service", "category": "公共交通", "definition": "连接城区与乡镇村庄、统筹城乡一体化的公共汽车客运服务。", "colloquial": ["城乡公交", "乡镇公交"], "related": ["常规公交", "首末站"]}
+{"id": "TRANSIT-0110", "term_zh": "共享汽车", "term_en": "carsharing", "category": "公共交通", "definition": "以分时或按次计费、供用户随借随还的共享小汽车出行服务。", "colloquial": ["共享汽车", "分时租赁"], "related": ["共享单车", "网约车"]}
+{"id": "TRANSIT-0111", "term_zh": "非法营运", "term_en": "illegal transport operation", "category": "公共交通", "definition": "未取得道路运输经营许可擅自从事载客、货运经营的行为，俗称黑车拉客。", "colloquial": ["非法营运", "黑车", "拉黑活"], "related": ["巡游出租车", "网约车监管平台"]}

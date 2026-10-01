@@ -1,0 +1,19 @@
+{
+ "region_code": "shanghai",
+ "region": "上海",
+ "note": "吴语上海话常见说法。",
+ "entries": [
+  {
+   "phrase": "差头",
+   "term": "TRANSIT-0066",
+   "surface": "出租车",
+   "note": "上海话称出租车为「差头」，源自英文 chart；句中改写用「出租车」"
+  },
+  {
+   "phrase": "摆渡",
+   "term": "TRANSIT-0108",
+   "surface": "轮渡",
+   "note": "上海话坐过江轮渡为「摆渡」；句中改写用「轮渡」"
+  }
+ ]
+}

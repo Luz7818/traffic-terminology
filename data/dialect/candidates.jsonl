@@ -1,0 +1,250 @@
+{"region_code": "national", "phrase": "F杆", "status": "待核实", "note": "悬臂标志交管俗称", "proposed_term": "INTX-0080"}
+{"region_code": "national", "phrase": "LED灯", "status": "待核实", "note": "LED信号灯俗称", "proposed_term": "SIG-0079"}
+{"region_code": "national", "phrase": "丁字路", "status": "待核实", "note": "T形交叉口俗称", "proposed_term": "INTX-0005"}
+{"region_code": "national", "phrase": "三脚架", "note": "「三脚架」＝三角警示牌的通行俗称", "status": "待核实", "proposed_term": "SAFE-0048"}
+{"region_code": "national", "phrase": "三角架", "status": "待核实", "note": "三角警示牌俗称", "proposed_term": "SAFE-0048"}
+{"region_code": "national", "phrase": "下高速", "status": "待核实", "note": "驶离高速公路", "proposed_term": "FWY-0020"}
+{"region_code": "national", "phrase": "不系安全带", "status": "待核实", "note": "安全带违法俗称", "proposed_term": "SAFE-0037"}
+{"region_code": "national", "phrase": "主责", "status": "待核实", "note": "主要责任简称", "proposed_term": "SAFE-0044"}
+{"region_code": "national", "phrase": "井盖子", "status": "待核实", "note": "北方叫法", "proposed_term": "ROAD-0075"}
+{"region_code": "national", "phrase": "人工车道", "status": "待核实", "note": "人工收费车道简称", "proposed_term": "FWY-0006"}
+{"region_code": "national", "phrase": "人脸识别", "status": "待核实", "note": "人脸识别卡口俗称", "proposed_term": "ITS-0016"}
+{"region_code": "national", "phrase": "人行横道线", "status": "待核实", "note": "人行横道标线叫法", "proposed_term": "INTX-0025"}
+{"region_code": "national", "phrase": "代步车", "status": "待核实", "note": "低速电动车别称", "proposed_term": "SAFE-0123"}
+{"region_code": "national", "phrase": "会车", "status": "待核实", "note": "需新增锚点：会车"}
+{"region_code": "national", "phrase": "侧碰", "status": "待核实", "note": "侧面碰撞事故简称", "proposed_term": "SAFE-0009"}
+{"region_code": "national", "phrase": "信号联动", "status": "待核实", "note": "协调控制俗称", "proposed_term": "SIG-0042"}
+{"region_code": "national", "phrase": "倒车镜", "status": "待核实", "note": "后视镜俗称", "proposed_term": "SAFE-0135"}
+{"region_code": "national", "phrase": "停标志", "status": "待核实", "note": "停车让行标志俗称（八角停）", "proposed_term": "INTX-0014"}
+{"region_code": "national", "phrase": "停车费", "status": "待核实", "note": "停车收费标准语境", "proposed_term": "SAFE-0101"}
+{"region_code": "national", "phrase": "公交接驳", "status": "待核实", "note": "接驳语境", "proposed_term": "TRANSIT-0064"}
+{"region_code": "national", "phrase": "公交港湾", "status": "待核实", "note": "港湾式停靠站俗称", "proposed_term": "TRANSIT-0008"}
+{"region_code": "national", "phrase": "公交站台", "status": "待核实", "note": "公交停靠站", "proposed_term": "TRANSIT-0007"}
+{"region_code": "national", "phrase": "公共汽车", "status": "待核实", "note": "常规公交全称", "proposed_term": "TRANSIT-0002"}
+{"region_code": "national", "phrase": "减速道", "status": "待核实", "note": "减速车道简称", "proposed_term": "FWY-0022"}
+{"region_code": "national", "phrase": "出口收费站", "status": "待核实", "note": "匝道收费站俗称", "proposed_term": "FWY-0005"}
+{"region_code": "national", "phrase": "出车祸", "status": "待核实", "note": "发生交通事故", "proposed_term": "SAFE-0001"}
+{"region_code": "national", "phrase": "出险", "status": "待核实", "note": "保险出险语境", "proposed_term": "SAFE-0046"}
+{"region_code": "national", "phrase": "刹车", "note": "「刹车」＝制动的通行叫法；需新增锚点：行车制动", "status": "待核实", "proposed_term": null}
+{"region_code": "national", "phrase": "加车", "status": "待核实", "note": "高峰加车俗称", "proposed_term": "TRANSIT-0025"}
+{"region_code": "national", "phrase": "加速道", "status": "待核实", "note": "加速车道简称", "proposed_term": "FWY-0021"}
+{"region_code": "national", "phrase": "区域联动", "status": "待核实", "note": "区域协调控制俗称", "proposed_term": "SIG-0054"}
+{"region_code": "national", "phrase": "区间测速牌", "status": "待核实", "note": "区间测速标志", "proposed_term": "FWY-0044"}
+{"region_code": "national", "phrase": "单双号限行", "status": "待核实", "note": "需新增锚点：单双号限行"}
+{"region_code": "national", "phrase": "单黄线", "status": "待核实", "note": "黄色实线通行简称", "proposed_term": "INTX-0067"}
+{"region_code": "national", "phrase": "占用公交道", "status": "待核实", "note": "公交专用道违规占用口语", "proposed_term": "TRANSIT-0096"}
+{"region_code": "national", "phrase": "危化品车", "status": "待核实", "note": "危险货物运输车辆简称", "proposed_term": "SAFE-0087"}
+{"region_code": "national", "phrase": "双闪", "note": "「双闪灯」＝危险报警闪光灯的通行简称；需新增锚点：危险报警闪光灯", "status": "待核实", "proposed_term": null}
+{"region_code": "national", "phrase": "反光镜", "status": "待核实", "note": "后视镜俗称", "proposed_term": "SAFE-0135"}
+{"region_code": "national", "phrase": "右转保护", "status": "待核实", "note": "右转保护相位简称", "proposed_term": "SIG-0093"}
+{"region_code": "national", "phrase": "喇叭口", "status": "待核实", "note": "展宽段俗称", "proposed_term": "INTX-0039"}
+{"region_code": "national", "phrase": "团雾带", "status": "待核实", "note": "团雾多发路段俗称", "proposed_term": "FWY-0076"}
+{"region_code": "national", "phrase": "围挡", "status": "待核实", "note": "施工围挡简称", "proposed_term": "ROAD-0097"}
+{"region_code": "national", "phrase": "圆灯", "status": "待核实", "note": "机动车信号灯（圆盘灯）", "proposed_term": "SIG-0003"}
+{"region_code": "national", "phrase": "地锁", "status": "待核实", "note": "私装地锁简称", "proposed_term": "SAFE-0108"}
+{"region_code": "national", "phrase": "城市大脑", "status": "待核实", "note": "城市交通大脑俗称", "proposed_term": "ITS-0070"}
+{"region_code": "national", "phrase": "堵得慌", "status": "待核实", "note": "拥堵口语", "proposed_term": "FLOW-0037"}
+{"region_code": "national", "phrase": "堵死", "status": "待核实", "note": "严重拥堵俗称", "proposed_term": "FLOW-0040"}
+{"region_code": "national", "phrase": "堵点", "status": "待核实", "note": "常发拥堵路段俗称", "proposed_term": "FLOW-0089"}
+{"region_code": "national", "phrase": "堵车了", "status": "待核实", "note": "堵车的口语形态", "proposed_term": "FLOW-0037"}
+{"region_code": "national", "phrase": "大事故", "status": "待核实", "note": "重大事故俗称", "proposed_term": "SAFE-0004"}
+{"region_code": "national", "phrase": "大堵车", "status": "待核实", "note": "严重拥堵俗称", "proposed_term": "FLOW-0040"}
+{"region_code": "national", "phrase": "大巴", "status": "待核实", "note": "大型公共汽车泛称", "proposed_term": "TRANSIT-0002"}
+{"region_code": "national", "phrase": "大灯", "note": "「大灯」＝前照灯的通行叫法；需新增锚点：前照灯", "status": "待核实", "proposed_term": null}
+{"region_code": "national", "phrase": "大车比例", "status": "待核实", "note": "大型车比例简称", "proposed_term": "FLOW-0078"}
+{"region_code": "national", "phrase": "大转盘", "status": "待核实", "note": "环形交叉口俗称", "proposed_term": "INTX-0011"}
+{"region_code": "national", "phrase": "安全锤", "status": "待核实", "note": "需新增锚点：安全锤"}
+{"region_code": "national", "phrase": "定损", "status": "待核实", "note": "需新增锚点：保险定损"}
+{"region_code": "national", "phrase": "定时控制", "status": "待核实", "note": "定周期控制别称", "proposed_term": "SIG-0032"}
+{"region_code": "national", "phrase": "对面车道", "status": "待核实", "note": "对向车道俗称", "proposed_term": "ROAD-0061"}
+{"region_code": "national", "phrase": "导向车道", "status": "待核实", "note": "导向车道线简称", "proposed_term": "INTX-0072"}
+{"region_code": "national", "phrase": "封高速", "status": "待核实", "note": "高速公路封闭俗称", "proposed_term": "FWY-0050"}
+{"region_code": "national", "phrase": "小刮蹭", "status": "待核实", "note": "轻微刮擦事故", "proposed_term": "SAFE-0010"}
+{"region_code": "national", "phrase": "小绿人", "status": "待核实", "note": "行人信号灯绿色通行人形俗称", "proposed_term": "SIG-0008"}
+{"region_code": "national", "phrase": "尾班车", "status": "待核实", "note": "末班车粤语/通用说法", "proposed_term": "TRANSIT-0022"}
+{"region_code": "national", "phrase": "岔路口", "status": "待核实", "note": "多岔路口泛称", "proposed_term": "INTX-0001"}
+{"region_code": "national", "phrase": "左转保护", "status": "待核实", "note": "左转保护相位简称", "proposed_term": "INTX-0084"}
+{"region_code": "national", "phrase": "左转相位", "status": "待核实", "note": "独立左转相位简称", "proposed_term": "SIG-0069"}
+{"region_code": "national", "phrase": "市郊铁路", "status": "待核实", "note": "市域铁路别称", "proposed_term": "TRANSIT-0042"}
+{"region_code": "national", "phrase": "干线", "status": "待核实", "note": "干线道路简称", "proposed_term": "ROAD-0092"}
+{"region_code": "national", "phrase": "干道", "status": "待核实", "note": "主干路通行简称", "proposed_term": "ROAD-0002"}
+{"region_code": "national", "phrase": "年审", "status": "待核实", "note": "机动车检验俗称（年审/年检并存）", "proposed_term": "SAFE-0125"}
+{"region_code": "national", "phrase": "应急停车带", "status": "待核实", "note": "紧急停车带别称，注意与应急车道区分", "proposed_term": "FWY-0028"}
+{"region_code": "national", "phrase": "应急电话", "status": "待核实", "note": "紧急电话别称", "proposed_term": "FWY-0068"}
+{"region_code": "national", "phrase": "延误", "status": "待核实", "note": "拥堵延误泛称", "proposed_term": "FLOW-0031"}
+{"region_code": "national", "phrase": "引桥", "status": "待核实", "note": "需新增锚点：引桥"}
+{"region_code": "national", "phrase": "强行加塞", "status": "待核实", "note": "违法变更车道俗称", "proposed_term": "SAFE-0028"}
+{"region_code": "national", "phrase": "当量小汽车", "status": "待核实", "note": "客车当量换算系数（pcu）俗称", "proposed_term": "FLOW-0077"}
+{"region_code": "national", "phrase": "待转屏", "status": "待核实", "note": "待转提示屏简称", "proposed_term": "SIG-0105"}
+{"region_code": "national", "phrase": "急弯", "status": "待核实", "note": "急弯路段简称", "proposed_term": "SAFE-0059"}
+{"region_code": "national", "phrase": "急救车优先", "status": "待核实", "note": "紧急车辆优先俗称", "proposed_term": "SIG-0062"}
+{"region_code": "national", "phrase": "慢行系统", "status": "待核实", "note": "慢行交通别称", "proposed_term": "TRANSIT-0078"}
+{"region_code": "national", "phrase": "手刹", "note": "「手刹」＝驻车制动的通行叫法；需新增锚点：驻车制动", "status": "待核实", "proposed_term": null}
+{"region_code": "national", "phrase": "扎胎", "status": "待核实", "note": "需新增锚点：轮胎被扎"}
+{"region_code": "national", "phrase": "扩建", "status": "待核实", "note": "改扩建工程简称", "proposed_term": "FWY-0071"}
+{"region_code": "national", "phrase": "护网", "status": "待核实", "note": "隔离栅俗称", "proposed_term": "ROAD-0048"}
+{"region_code": "national", "phrase": "拖车费", "status": "待核实", "note": "拖移服务费用", "proposed_term": "SAFE-0086"}
+{"region_code": "national", "phrase": "拥堵", "status": "待核实", "note": "交通拥堵简称", "proposed_term": "FLOW-0037"}
+{"region_code": "national", "phrase": "拥堵蔓延", "status": "待核实", "note": "拥堵传播俗称", "proposed_term": "FLOW-0048"}
+{"region_code": "national", "phrase": "拥堵路段", "status": "待核实", "note": "常发拥堵路段", "proposed_term": "FLOW-0089"}
+{"region_code": "national", "phrase": "指挥中心", "status": "待核实", "note": "交通指挥中心简称", "proposed_term": "ITS-0024"}
+{"region_code": "national", "phrase": "指路牌", "status": "待核实", "note": "指路标志俗称", "proposed_term": "INTX-0055"}
+{"region_code": "national", "phrase": "挪车电话", "status": "待核实", "note": "挪车服务语境", "proposed_term": "SAFE-0122"}
+{"region_code": "national", "phrase": "换乘枢纽", "status": "待核实", "note": "综合客运枢纽俗称", "proposed_term": "TRANSIT-0049"}
+{"region_code": "national", "phrase": "掉头位", "status": "待核实", "note": "掉头开口俗称", "proposed_term": "INTX-0036"}
+{"region_code": "national", "phrase": "排队", "status": "待核实", "note": "排队长度泛称", "proposed_term": "FLOW-0032"}
+{"region_code": "national", "phrase": "摩的", "status": "待核实", "note": "摩的载客多属非法营运", "proposed_term": "TRANSIT-0111"}
+{"region_code": "national", "phrase": "擦碰", "status": "待核实", "note": "刮擦事故俗称", "proposed_term": "SAFE-0010"}
+{"region_code": "national", "phrase": "断交", "status": "待核实", "note": "断交施工交管简称", "proposed_term": "FWY-0072"}
+{"region_code": "national", "phrase": "方向盘", "status": "待核实", "note": "需新增锚点：转向盘"}
+{"region_code": "national", "phrase": "施工区", "status": "待核实", "note": "占道施工作业区俗称", "proposed_term": "FWY-0070"}
+{"region_code": "national", "phrase": "无人出租车", "status": "待核实", "note": "自动驾驶出租车俗称", "proposed_term": "ITS-0034"}
+{"region_code": "national", "phrase": "无人驾驶测试区", "status": "待核实", "note": "自动驾驶测试区俗称", "proposed_term": "ITS-0089"}
+{"region_code": "national", "phrase": "无障碍车位", "status": "待核实", "note": "无障碍机动车泊位通行简称", "proposed_term": "SAFE-0105"}
+{"region_code": "national", "phrase": "景区标志", "status": "待核实", "note": "旅游区标志俗称", "proposed_term": "INTX-0056"}
+{"region_code": "national", "phrase": "智能信号灯", "status": "待核实", "note": "自适应控制俗称", "proposed_term": "SIG-0041"}
+{"region_code": "national", "phrase": "标线", "status": "待核实", "note": "交通标线简称", "proposed_term": "INTX-0063"}
+{"region_code": "national", "phrase": "栏杆", "status": "待核实", "note": "护栏泛称，易歧义", "proposed_term": "ROAD-0044"}
+{"region_code": "national", "phrase": "校车", "status": "待核实", "note": "校车安全管理语境", "proposed_term": "SAFE-0088"}
+{"region_code": "national", "phrase": "桥洞", "status": "待核实", "note": "涵洞俗称", "proposed_term": "ROAD-0089"}
+{"region_code": "national", "phrase": "横断面", "status": "待核实", "note": "道路横断面简称", "proposed_term": "ROAD-0018"}
+{"region_code": "national", "phrase": "次责", "status": "待核实", "note": "次要责任简称", "proposed_term": "SAFE-0044"}
+{"region_code": "national", "phrase": "步行道", "status": "待核实", "note": "人行道别称", "proposed_term": "ROAD-0025"}
+{"region_code": "national", "phrase": "步道", "status": "待核实", "note": "人行道简称", "proposed_term": "ROAD-0025"}
+{"region_code": "national", "phrase": "气象站", "status": "待核实", "note": "路侧气象检测器俗称，易歧义", "proposed_term": "ITS-0077"}
+{"region_code": "national", "phrase": "水泥护栏", "status": "待核实", "note": "混凝土护栏俗称", "proposed_term": "ROAD-0046"}
+{"region_code": "national", "phrase": "没红绿灯的路口", "status": "待核实", "note": "无信号交叉口口语", "proposed_term": "INTX-0003"}
+{"region_code": "national", "phrase": "油门", "note": "「油门」＝加速踏板；需新增锚点：加速踏板", "status": "待核实", "proposed_term": null}
+{"region_code": "national", "phrase": "流动测速", "status": "待核实", "note": "需新增锚点：流动测速"}
+{"region_code": "national", "phrase": "清障车", "status": "待核实", "note": "清障救援车辆", "proposed_term": "FWY-0066"}
+{"region_code": "national", "phrase": "滴滴", "status": "待核实", "note": "网约车平台名泛称，需核实用法", "proposed_term": "TRANSIT-0067"}
+{"region_code": "national", "phrase": "灭火器", "note": "「车载灭火器」；需新增锚点：车载灭火器", "status": "待核实", "proposed_term": null}
+{"region_code": "national", "phrase": "烂路", "status": "待核实", "note": "路面破损俗称", "proposed_term": "ROAD-0116"}
+{"region_code": "national", "phrase": "爆胎", "status": "待核实", "note": "需新增锚点：爆胎（轮胎突发失效）"}
+{"region_code": "national", "phrase": "猫眼", "status": "待核实", "note": "突起路标俗称", "proposed_term": "INTX-0077"}
+{"region_code": "national", "phrase": "理赔", "status": "待核实", "note": "保险理赔简称", "proposed_term": "SAFE-0046"}
+{"region_code": "national", "phrase": "电子狗", "status": "待核实", "note": "需新增锚点：车载测速预警设备"}
+{"region_code": "national", "phrase": "盲区镜", "status": "待核实", "note": "凸面反光镜俗称", "proposed_term": "SAFE-0053"}
+{"region_code": "national", "phrase": "直行待转区", "status": "待核实", "note": "直行待行区通行误称", "proposed_term": "INTX-0031"}
+{"region_code": "national", "phrase": "砂石路", "status": "待核实", "note": "需新增锚点：砂石路面"}
+{"region_code": "national", "phrase": "禁止标志", "status": "待核实", "note": "禁令标志别称", "proposed_term": "INTX-0053"}
+{"region_code": "national", "phrase": "离合", "status": "待核实", "note": "需新增锚点：离合器"}
+{"region_code": "national", "phrase": "私了", "status": "待核实", "note": "事故自行协商（快处快赔语境）", "proposed_term": "SAFE-0045"}
+{"region_code": "national", "phrase": "私家车", "status": "待核实", "note": "需新增锚点：私家车（非营运小客车）"}
+{"region_code": "national", "phrase": "积水", "status": "待核实", "note": "需新增锚点：路面积水"}
+{"region_code": "national", "phrase": "窨井盖", "status": "待核实", "note": "吴语区/通用叫法", "proposed_term": "ROAD-0075"}
+{"region_code": "national", "phrase": "红绿灯时长", "status": "待核实", "note": "周期时长俗称", "proposed_term": "SIG-0017"}
+{"region_code": "national", "phrase": "红绿灯杆", "status": "待核实", "note": "信号灯杆", "proposed_term": "SIG-0077"}
+{"region_code": "national", "phrase": "红绿灯配时", "status": "待核实", "note": "信号配时俗称", "proposed_term": "SIG-0029"}
+{"region_code": "national", "phrase": "结冰", "status": "待核实", "note": "路面结冰简称", "proposed_term": "FWY-0075"}
+{"region_code": "national", "phrase": "绕行", "status": "待核实", "note": "分流诱导口语（前方请绕行）", "proposed_term": "FWY-0053"}
+{"region_code": "national", "phrase": "绿波速度", "status": "待核实", "note": "带速俗称", "proposed_term": "SIG-0052"}
+{"region_code": "national", "phrase": "绿灯延时", "status": "待核实", "note": "绿灯延长俗称", "proposed_term": "SIG-0039"}
+{"region_code": "national", "phrase": "绿灯比例", "status": "待核实", "note": "绿信比俗称", "proposed_term": "SIG-0020"}
+{"region_code": "national", "phrase": "绿灯秒数", "status": "待核实", "note": "绿灯时间俗称", "proposed_term": "SIG-0021"}
+{"region_code": "national", "phrase": "药驾", "status": "待核实", "note": "需新增锚点：药驾（药物驾驶）"}
+{"region_code": "national", "phrase": "菱形标线", "status": "待核实", "note": "人行横道预告标识俗称", "proposed_term": "INTX-0074"}
+{"region_code": "national", "phrase": "解除限速", "status": "待核实", "note": "解除限速标志简称", "proposed_term": "INTX-0062"}
+{"region_code": "national", "phrase": "警示三脚架", "status": "待核实", "note": "三角警示牌俗称", "proposed_term": "SAFE-0048"}
+{"region_code": "national", "phrase": "警示标志", "status": "待核实", "note": "警告标志别称", "proposed_term": "INTX-0052"}
+{"region_code": "national", "phrase": "计重", "status": "待核实", "note": "计重收费简称", "proposed_term": "FWY-0016"}
+{"region_code": "national", "phrase": "让右", "status": "待核实", "note": "让右原则驾校简称", "proposed_term": "INTX-0017"}
+{"region_code": "national", "phrase": "让行标志", "status": "待核实", "note": "减速让行标志俗称", "proposed_term": "INTX-0015"}
+{"region_code": "national", "phrase": "读秒器", "status": "待核实", "note": "倒计时显示器俗称", "proposed_term": "SIG-0009"}
+{"region_code": "national", "phrase": "豁口", "status": "待核实", "note": "中央分隔带开口俗称", "proposed_term": "INTX-0095"}
+{"region_code": "national", "phrase": "货车右行", "status": "待核实", "note": "货车靠右通行别称", "proposed_term": "FWY-0064"}
+{"region_code": "national", "phrase": "超速拍照", "status": "待核实", "note": "超速抓拍俗称", "proposed_term": "ITS-0013"}
+{"region_code": "national", "phrase": "路况", "status": "待核实", "note": "实时路况泛称", "proposed_term": "ITS-0040"}
+{"region_code": "national", "phrase": "路口延误", "status": "待核实", "note": "信号交叉口延误俗称", "proposed_term": "SIG-0094"}
+{"region_code": "national", "phrase": "路坑", "status": "待核实", "note": "坑槽俗称", "proposed_term": "ROAD-0072"}
+{"region_code": "national", "phrase": "路标", "status": "待核实", "note": "交通标志俗称", "proposed_term": "INTX-0051"}
+{"region_code": "national", "phrase": "路灯不亮", "status": "待核实", "note": "道路照明不足口语", "proposed_term": "SAFE-0073"}
+{"region_code": "national", "phrase": "路边停车", "status": "待核实", "note": "路内停车口语", "proposed_term": "SAFE-0092"}
+{"region_code": "national", "phrase": "路面开裂", "status": "待核实", "note": "路面裂缝口语", "proposed_term": "ROAD-0073"}
+{"region_code": "national", "phrase": "蹭车", "status": "待核实", "note": "刮擦事故口语", "proposed_term": "SAFE-0010"}
+{"region_code": "national", "phrase": "车位缺口", "status": "待核实", "note": "停车缺口口语", "proposed_term": "SAFE-0100"}
+{"region_code": "national", "phrase": "车位锁", "status": "待核实", "note": "私装地锁别称", "proposed_term": "SAFE-0108"}
+{"region_code": "national", "phrase": "车场", "status": "待核实", "note": "停车场俗称", "proposed_term": "SAFE-0091"}
+{"region_code": "national", "phrase": "车接龙", "status": "待核实", "note": "串车俗称（公交连成串）", "proposed_term": "TRANSIT-0086"}
+{"region_code": "national", "phrase": "车检", "status": "待核实", "note": "机动车检验简称", "proposed_term": "SAFE-0125"}
+{"region_code": "national", "phrase": "车流密度", "status": "待核实", "note": "密度俗称", "proposed_term": "FLOW-0018"}
+{"region_code": "national", "phrase": "车牌号", "status": "待核实", "note": "需新增锚点：机动车号牌"}
+{"region_code": "national", "phrase": "车隔", "status": "待核实", "note": "发车间隔北方俗称", "proposed_term": "TRANSIT-0017"}
+{"region_code": "national", "phrase": "转向箭头", "status": "待核实", "note": "导向箭头俗称", "proposed_term": "INTX-0073"}
+{"region_code": "national", "phrase": "转盘路口", "status": "待核实", "note": "环形交叉口俗称", "proposed_term": "INTX-0011"}
+{"region_code": "national", "phrase": "辫子车", "status": "待核实", "note": "无轨电车俗称（集电杆如辫子）", "proposed_term": "TRANSIT-0040"}
+{"region_code": "national", "phrase": "迎面相撞", "status": "待核实", "note": "正面碰撞事故口语", "proposed_term": "SAFE-0008"}
+{"region_code": "national", "phrase": "近光", "note": "「近光灯」；需新增锚点：前照灯", "status": "待核实", "proposed_term": null}
+{"region_code": "national", "phrase": "连环车祸", "status": "待核实", "note": "连环追尾俗称", "proposed_term": "SAFE-0013"}
+{"region_code": "national", "phrase": "道牙子", "status": "待核实", "note": "北方对路缘石叫法", "proposed_term": "ROAD-0040"}
+{"region_code": "national", "phrase": "道路塌陷", "status": "待核实", "note": "路面沉陷别称", "proposed_term": "ROAD-0074"}
+{"region_code": "national", "phrase": "道路施工", "status": "待核实", "note": "占道施工语境", "proposed_term": "ROAD-0095"}
+{"region_code": "national", "phrase": "道路标线", "status": "待核实", "note": "交通标线别称", "proposed_term": "INTX-0063"}
+{"region_code": "national", "phrase": "道钉", "status": "待核实", "note": "突起路标俗称", "proposed_term": "INTX-0077"}
+{"region_code": "national", "phrase": "遮光板", "status": "待核实", "note": "防眩板俗称", "proposed_term": "SAFE-0054"}
+{"region_code": "national", "phrase": "避险道", "status": "待核实", "note": "避险车道简称", "proposed_term": "FWY-0056"}
+{"region_code": "national", "phrase": "销分", "status": "待核实", "note": "记分处理俗称，含买分卖分语境需核实口径", "proposed_term": "SAFE-0040"}
+{"region_code": "national", "phrase": "错峰停车", "status": "待核实", "note": "错时共享停车俗称", "proposed_term": "SAFE-0110"}
+{"region_code": "national", "phrase": "闯黄灯", "note": "「闯黄灯」＝黄灯亮时越线通行（与闯红灯分列）", "status": "待核实", "proposed_term": null}
+{"region_code": "national", "phrase": "闸口", "status": "待核实", "note": "闸机俗称", "proposed_term": "TRANSIT-0053"}
+{"region_code": "national", "phrase": "限速标志", "status": "待核实", "note": "限制速度标志", "proposed_term": "INTX-0061"}
+{"region_code": "national", "phrase": "限高架", "status": "待核实", "note": "限高设施", "proposed_term": "ROAD-0086"}
+{"region_code": "national", "phrase": "随意掉头", "status": "待核实", "note": "违法掉头口语", "proposed_term": "SAFE-0029"}
+{"region_code": "national", "phrase": "隔离带", "status": "待核实", "note": "分隔带泛称（中央/机非需辨）", "proposed_term": "ROAD-0036"}
+{"region_code": "national", "phrase": "隔离栏", "status": "待核实", "note": "机非隔离栏泛称", "proposed_term": "ROAD-0039"}
+{"region_code": "national", "phrase": "隔离石墩", "status": "待核实", "note": "隔离墩俗称", "proposed_term": "SAFE-0056"}
+{"region_code": "national", "phrase": "隔音屏", "status": "待核实", "note": "声屏障通行俗称", "proposed_term": "ROAD-0049"}
+{"region_code": "national", "phrase": "隧洞", "status": "待核实", "note": "隧道别称", "proposed_term": "ROAD-0090"}
+{"region_code": "national", "phrase": "雾灯", "status": "待核实", "note": "需新增锚点：雾灯"}
+{"region_code": "national", "phrase": "震荡标线", "status": "待核实", "note": "减速标线俗称", "proposed_term": "INTX-0075"}
+{"region_code": "national", "phrase": "面包车", "status": "待核实", "note": "需新增锚点：面包车（轻型客车）"}
+{"region_code": "national", "phrase": "顶包", "status": "待核实", "note": "需新增锚点：交通肇事顶包"}
+{"region_code": "national", "phrase": "马路", "status": "待核实", "note": "道路泛称", "proposed_term": "ROAD-0015"}
+{"region_code": "national", "phrase": "马路沿子", "status": "待核实", "note": "北方对路缘石叫法", "proposed_term": "ROAD-0040"}
+{"region_code": "national", "phrase": "驾照", "note": "「驾照」＝驾驶证的通行简称；需新增锚点：驾驶证", "status": "待核实", "proposed_term": null}
+{"region_code": "national", "phrase": "高峰期", "status": "待核实", "note": "早晚高峰泛称", "proposed_term": "FLOW-0005"}
+{"region_code": "national", "phrase": "高架路", "status": "待核实", "note": "城市高架道路", "proposed_term": "ROAD-0001"}
+{"region_code": "national", "phrase": "高清地图", "status": "待核实", "note": "高精地图常见误称", "proposed_term": "ITS-0045"}
+{"region_code": "national", "phrase": "高速口", "status": "待核实", "note": "高速公路入口俗称", "proposed_term": "FWY-0019"}
+{"region_code": "national", "phrase": "黄灯闪烁", "status": "待核实", "note": "黄闪", "proposed_term": "SIG-0013"}
+{"region_code": "national", "phrase": "黑摩的", "status": "待核实", "note": "非法营运摩托车", "proposed_term": "TRANSIT-0111"}
+{"region_code": "national", "phrase": "龙门架", "status": "待核实", "note": "门架标志通行俗称", "proposed_term": "INTX-0079"}
+{"region_code": "beijing", "phrase": "三蹦子", "note": "京津冀对载客机动/电动三轮的俗称；需新增锚点：载客三轮车", "status": "待核实", "proposed_term": null}
+{"region_code": "beijing", "phrase": "二把刀司机", "note": "北方话「二把刀」＝技术不精；指半吊子司机；需新增锚点：新手驾驶人?", "status": "待核实", "proposed_term": null}
+{"region_code": "beijing", "phrase": "趴活儿", "note": "北京话出租车在路边等活", "status": "待核实", "proposed_term": null}
+{"region_code": "beijing", "phrase": "面的", "note": "上世纪京津对面包车出租的叫法（历史词）", "status": "待核实", "proposed_term": null}
+{"region_code": "dongbei", "phrase": "倒骑驴", "note": "东北对载人载货倒骑三轮车的叫法；需新增锚点：载客/载货三轮车", "status": "待核实", "proposed_term": null}
+{"region_code": "dongbei", "phrase": "大客", "note": "东北对大型客车的简称", "status": "待核实", "proposed_term": null}
+{"region_code": "dongbei", "phrase": "清雪车", "status": "待核实", "note": "东北冬季 需新增锚点：除雪车"}
+{"region_code": "dongbei", "phrase": "贼滑", "note": "东北话「贼」＝非常；「路面贼滑」＝很滑", "status": "待核实", "proposed_term": "SAFE-0069"}
+{"region_code": "dongbei", "phrase": "雪地胎", "status": "待核实", "note": "东北冬季 需新增锚点：雪地轮胎"}
+{"region_code": "guangdong", "phrase": "中巴", "note": "粤语区对中型巴士的叫法", "status": "待核实", "proposed_term": null}
+{"region_code": "guangdong", "phrase": "小巴", "note": "粤语区对小型巴士的叫法", "status": "待核实", "proposed_term": null}
+{"region_code": "guangdong", "phrase": "巴士站", "status": "待核实", "note": "粤语 公交站", "proposed_term": "TRANSIT-0007"}
+{"region_code": "guangdong", "phrase": "抄牌", "note": "粤语区交警对违停车辆记录抄牌", "status": "待核实", "proposed_term": "ITS-0014"}
+{"region_code": "guangdong", "phrase": "油站", "status": "待核实", "note": "粤语 加油站", "proposed_term": "FWY-0093"}
+{"region_code": "guangdong", "phrase": "泊车", "note": "粤语区/港式「泊车」＝停放车辆", "status": "待核实", "proposed_term": null}
+{"region_code": "guangdong", "phrase": "牛肉干", "note": "粤语俚语：收到违例驾驶罚单（罚单形似牛肉干）；需新增锚点：交通违法处罚决定书?", "status": "待核实", "proposed_term": null}
+{"region_code": "guangdong", "phrase": "电鸡", "note": "广东近年对电动自行车的流行叫法", "status": "待核实", "proposed_term": "SAFE-0127"}
+{"region_code": "hebei", "phrase": "三马子", "status": "待核实", "note": "河北对农用三轮车的叫法 需新增锚点：农用三轮车"}
+{"region_code": "henan", "phrase": "怼上了", "note": "河南话「怼上了」＝撞上了", "status": "待核实", "proposed_term": "SAFE-0001"}
+{"region_code": "henan", "phrase": "路咋恁堵", "status": "待核实", "note": "河南话「恁」＝这么；路咋恁堵＝路怎么这么堵", "proposed_term": "FLOW-0037"}
+{"region_code": "henan", "phrase": "轱辘", "status": "待核实", "note": "北方 车轮 需新增锚点：车轮"}
+{"region_code": "henan", "phrase": "骑车子", "note": "河南等北方「骑车子」＝骑自行车；需新增锚点：自行车", "status": "待核实", "proposed_term": null}
+{"region_code": "hongkong", "phrase": "八达通", "status": "待核实", "note": "香港交通卡", "proposed_term": "TRANSIT-0054"}
+{"region_code": "hongkong", "phrase": "港铁", "status": "待核实", "note": "香港地铁", "proposed_term": "TRANSIT-0037"}
+{"region_code": "hubei", "phrase": "公汽", "note": "武汉同样说「公汽」，与广东共挂", "status": "待核实", "proposed_term": "TRANSIT-0002"}
+{"region_code": "hubei", "phrase": "麻木", "note": "武汉对载客三轮摩托的俗称；需新增锚点：载客三轮摩托车", "status": "待核实", "proposed_term": null}
+{"region_code": "shaanxi", "phrase": "撩咋咧", "note": "陕西方言「撩咋咧」＝好极了；「这条路撩咋咧」＝路况很好", "status": "待核实", "proposed_term": "FLOW-0043"}
+{"region_code": "shandong", "phrase": "半挂", "status": "待核实", "note": "半挂货车简称", "proposed_term": "SAFE-0130"}
+{"region_code": "shandong", "phrase": "半挂儿", "note": "山东等北方对半挂货车的简称", "status": "待核实", "proposed_term": "SAFE-0130"}
+{"region_code": "shandong", "phrase": "压车", "note": "山东与河南同样说「路上压车了」", "status": "待核实", "proposed_term": "FLOW-0037"}
+{"region_code": "shandong", "phrase": "地排车", "note": "山东对人力平板拖车的叫法；需新增锚点：人力货运三轮/地排车", "status": "待核实", "proposed_term": null}
+{"region_code": "shanghai", "phrase": "上街沿", "status": "待核实", "note": "吴语 人行道", "proposed_term": "ROAD-0025"}
+{"region_code": "shanghai", "phrase": "外牌", "note": "上海对外地牌照车辆的叫法，限行政策对象；需新增锚点：非本地号牌车辆", "status": "待核实", "proposed_term": null}
+{"region_code": "sichuan", "phrase": "交巡警", "note": "重庆对交通巡逻警察合一体制的叫法", "status": "待核实", "proposed_term": null}
+{"region_code": "sichuan", "phrase": "打围", "status": "待核实", "note": "川渝 施工围挡俗称", "proposed_term": "ROAD-0097"}
+{"region_code": "sichuan", "phrase": "火三轮", "note": "川渝对载客机动三轮的俗称；需新增锚点：载客三轮摩托车", "status": "待核实", "proposed_term": null}
+{"region_code": "zhejiang", "phrase": "交关堵", "note": "宁波等吴语「交关」＝非常；「路上交关堵」＝很堵", "status": "待核实", "proposed_term": "FLOW-0037"}
+{"region_code": "zhejiang", "phrase": "蛮好", "note": "吴语区「蛮好」＝挺好；「路况蛮好」", "status": "待核实", "proposed_term": "FLOW-0043"}
+{"region_code": "zhejiang", "phrase": "黄鱼车", "note": "吴语区对载货人力三轮车的叫法；需新增锚点：人力货运三轮车", "status": "待核实", "proposed_term": null}

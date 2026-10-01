@@ -10,12 +10,9 @@
   python scripts/query.py --check     # 跑内置回归用例，校验首选命中未退化
 """
 
-import json
 import sys
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "data"
+from corpus import load_entries, score
 
 # 回归用例：查询词 -> 期望的首选词条 ID。改动匹配算法或数据后用它兜住召回质量。
 CHECK_CASES = [
@@ -46,56 +43,6 @@ CHECK_CASES = [
     ("慢慢变宽的那一段", "INTX-0096"),
     ("green wave", "SIG-0044"),
 ]
-FILE_ORDER = [
-    "01_road_infrastructure.jsonl",
-    "02_intersection.jsonl",
-    "03_signal_control.jsonl",
-    "04_traffic_flow.jsonl",
-    "05_public_transit.jsonl",
-    "06_freeway.jsonl",
-    "07_its.jsonl",
-    "08_safety_parking.jsonl",
-]
-
-
-def load_entries():
-    entries = []
-    for filename in FILE_ORDER:
-        path = DATA_DIR / filename
-        if not path.exists():
-            continue
-        with path.open(encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line:
-                    entries.append(json.loads(line))
-    return entries
-
-
-def score(entry, q):
-    """返回匹配得分，None 表示不匹配。口语 > 术语 > 英文 > 定义。"""
-    q_lower = q.lower()
-    best = None
-    for c in entry.get("colloquial", []):
-        if q == c:
-            best = max(best or 0, 100)
-        elif q in c or c in q:
-            best = max(best or 0, 80)
-    tz = entry.get("term_zh", "")
-    if q == tz:
-        best = max(best or 0, 90)
-    elif q in tz or tz in q:
-        best = max(best or 0, 70)
-    te = entry.get("term_en", "").lower()
-    if q_lower == te:
-        best = max(best or 0, 90)
-    elif q_lower in te or te in q_lower:
-        best = max(best or 0, 60)
-    if q_lower in entry.get("definition", "").lower():
-        best = max(best or 0, 30)
-    if any(q in r for r in entry.get("related", [])):
-        best = max(best or 0, 40)
-    return best
 
 
 def run_check(entries):

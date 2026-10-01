@@ -17,34 +17,13 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
+from corpus import DATA_DIR, DATA_FILES, load_entries
+
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "data"
 REF_DIR = ROOT / "skill" / "traffic-terminology" / "references"
 SLICE_DIR = REF_DIR / "slices"
 
-FILE_ORDER = [
-    "01_road_infrastructure.jsonl",
-    "02_intersection.jsonl",
-    "03_signal_control.jsonl",
-    "04_traffic_flow.jsonl",
-    "05_public_transit.jsonl",
-    "06_freeway.jsonl",
-    "07_its.jsonl",
-    "08_safety_parking.jsonl",
-]
-
-def read_entries():
-    out = []
-    for filename in FILE_ORDER:
-        path = DATA_DIR / filename
-        if not path.exists():
-            continue
-        with path.open(encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line:
-                    out.append(json.loads(line))
-    return out
+records = load_entries()
 
 
 def build(records):
@@ -61,6 +40,8 @@ def build(records):
         for src, dst in (("disambiguation", "dis"), ("standards", "std")):
             if rec.get(src):
                 item[dst] = rec[src]
+        if rec.get("surface"):
+            item["sf"] = rec["surface"]
         entries[rec["id"]] = item
         for c in rec["colloquial"]:
             if rec["id"] not in index[c]:
@@ -69,7 +50,6 @@ def build(records):
     return entries, ordered
 
 
-records = read_entries()
 entries, index = build(records)
 
 by_prefix = defaultdict(list)
@@ -82,10 +62,7 @@ stats = {
     "ambiguous_colloquial": sum(1 for v in index.values() if len(v) > 1),
     "files": [],
 }
-for filename in FILE_ORDER:
-    stem = filename.split("_", 1)[0]
-    prefix = {"01": "ROAD", "02": "INTX", "03": "SIG", "04": "FLOW",
-              "05": "TRANSIT", "06": "FWY", "07": "ITS", "08": "SAFE"}[stem]
+for filename, prefix in DATA_FILES:
     stats["files"].append({"file": filename, "prefix": prefix, "entries": len(by_prefix[prefix])})
 
 SLICE_DIR.mkdir(parents=True, exist_ok=True)
@@ -98,6 +75,22 @@ payload = {
     "entries": entries,
     "index": index,
 }
+
+# 方言对照库：随索引交给 Skill，供其识别地区说法
+dialect_dir = DATA_DIR / "dialect"
+dialects = {}
+for dpath in sorted(dialect_dir.glob("*.json")) if dialect_dir.exists() else []:
+    ddata = json.loads(dpath.read_text(encoding="utf-8"))
+    dialects[ddata["region_code"]] = {
+        "region": ddata["region"],
+        "note": ddata.get("note", ""),
+        "entries": {
+            ent["phrase"]: {"term": ent["term"], **({"surface": ent["surface"]} if ent.get("surface") else {})}
+            for ent in ddata.get("entries", [])
+        },
+    }
+if dialects:
+    payload["dialects"] = dialects
 with (REF_DIR / "colloquial_index.json").open("w", encoding="utf-8") as f:
     json.dump(payload, f, ensure_ascii=False, indent=1)
 

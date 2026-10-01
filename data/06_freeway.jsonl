@@ -27,10 +27,10 @@
 {"id": "FWY-0027", "term_zh": "硬路肩", "term_en": "hard shoulder", "category": "高速公路", "definition": "行车道外侧经铺装、供紧急情况临时停靠的带状部分，正常情况禁止行驶。", "colloquial": ["应急车道（口语常混称）", "硬肩", "路肩"], "related": ["应急车道", "紧急停车带"], "standards": "JTG B01 公路工程技术标准"}
 {"id": "FWY-0028", "term_zh": "紧急停车带", "term_en": "emergency parking strip / lay-by", "category": "高速公路", "definition": "加宽设置的供车辆紧急停靠的带状设施，常设于长直线或隧道段。", "colloquial": ["应急停车港湾", "紧急停车区"], "related": ["硬路肩", "应急车道"]}
 {"id": "FWY-0029", "term_zh": "硬路肩临时开放", "term_en": "dynamic hard shoulder running", "category": "高速公路", "definition": "高峰或事件期间临时将硬路肩作为行车道开放的管理措施。", "colloquial": ["应急车道借用车道", "临时开放路肩"], "related": ["硬路肩", "车道控制标志"]}
-{"id": "FWY-0030", "term_zh": "服务区", "term_en": "service area", "category": "高速公路", "definition": "为司乘人员提供加油、餐饮、休息与车辆维修等服务的场所。", "colloquial": ["高速服务区", "休息区", "加油站服务区"], "related": ["停车区", "充电站"]}
+{"id": "FWY-0030", "term_zh": "服务区", "term_en": "service area", "category": "高速公路", "definition": "为司乘人员提供加油、餐饮、休息与车辆维修等服务的场所。", "colloquial": ["高速服务区", "休息区", "加油站服务区", "加油歇脚的"], "related": ["停车区", "充电站"]}
 {"id": "FWY-0031", "term_zh": "停车区", "term_en": "parking area (rest stop)", "category": "高速公路", "definition": "规模小于服务区、仅提供停车与简易设施的场所。", "colloquial": ["小休息点", "停车港湾"], "related": ["服务区"]}
 {"id": "FWY-0032", "term_zh": "互通式立体交叉", "term_en": "interchange", "category": "高速公路", "definition": "设匝道实现各方向车流相互转换的立体交叉。", "colloquial": ["互通", "高速枢纽口", "立交枢纽"], "related": ["匝道", "立体交叉"], "standards": "JTG D20 公路路线设计规范"}
-{"id": "FWY-0033", "term_zh": "枢纽互通", "term_en": "trumpet / system interchange between freeways", "category": "高速公路", "definition": "两条高速公路相交转换交通的互通形式。", "colloquial": ["高速转高速的枢纽", "两条高速互相拐的立交桥", "转另一条高速那个大立交"], "related": ["互通式立体交叉", "服务型互通"]}
+{"id": "FWY-0033", "term_zh": "枢纽互通", "term_en": "system interchange (between freeways)", "category": "高速公路", "definition": "两条高速公路相交转换交通的互通形式。", "colloquial": ["高速转高速的枢纽", "两条高速互相拐的立交桥", "转另一条高速那个大立交"], "related": ["互通式立体交叉", "服务型互通"]}
 {"id": "FWY-0034", "term_zh": "服务型互通", "term_en": "service interchange", "category": "高速公路", "definition": "高速公路与地方道路衔接转换交通的互通形式。", "colloquial": ["下高速进城的口", "下地方路的口子"], "related": ["互通式立体交叉", "枢纽互通"]}
 {"id": "FWY-0035", "term_zh": "出口编号", "term_en": "exit number", "category": "高速公路", "definition": "以互通里程或序号编排的出口标识编号，便于指路与导航。", "colloquial": ["几号出口", "出口号"], "related": ["指路标志", "里程桩"]}
 {"id": "FWY-0036", "term_zh": "里程桩", "term_en": "kilometer post", "category": "高速公路", "definition": "沿路标示里程的桩号标志，用于定位与报警。", "colloquial": ["里程碑", "公里桩"], "related": ["百米桩", "桩号"]}
@@ -46,14 +46,14 @@
 {"id": "FWY-0046", "term_zh": "可变限速标志", "term_en": "variable speed limit sign", "category": "高速公路", "definition": "按路况动态调整显示限速值的可变标志。", "colloquial": ["会变的限速牌", "雨天冬天会自己变的限速牌", "电子屏上写的限速数"], "related": ["车道控制标志", "可变情报板"]}
 {"id": "FWY-0047", "term_zh": "车道控制标志", "term_en": "lane control signal / lane status sign", "category": "高速公路", "definition": "以红叉绿箭头显示各车道开放状态的门架标志。", "colloquial": ["绿箭头红叉", "封道的灯"], "related": ["交通管制", "半幅封闭"]}
 {"id": "FWY-0048", "term_zh": "车距确认标志", "term_en": "headway confirmation marking", "category": "高速公路", "definition": "辅助驾驶人间距判断的标志标线组合。", "colloquial": ["确认车距牌", "保持车距标志"], "related": ["车头间距", "追尾"]}
-{"id": "FWY-0049", "term_zh": "交通管制", "term_en": "traffic restriction / traffic control", "category": "高速公路", "definition": "因恶劣天气、事故或施工对通行实施的限制、封闭或分流措施。", "colloquial": ["封路", "交通管制了", "不让走了"], "related": ["道路封闭", "分流诱导", "半幅封闭"]}
+{"id": "FWY-0049", "term_zh": "交通管制", "term_en": "traffic restriction / traffic control", "category": "高速公路", "definition": "因恶劣天气、事故或施工对通行实施的限制、封闭或分流措施。", "colloquial": ["封路", "交通管制了", "不让走了"], "related": ["道路封闭", "分流诱导", "半幅封闭"], "surface": {"交通管制了": "实施交通管制", "不让走了": "实施交通管制，禁止通行"}}
 {"id": "FWY-0050", "term_zh": "道路封闭", "term_en": "road closure", "category": "高速公路", "definition": "完全禁止车辆通行的管制措施，分全线与局部封闭。", "colloquial": ["封路了", "高速封了"], "related": ["交通管制", "分流诱导"]}
 {"id": "FWY-0051", "term_zh": "半幅封闭", "term_en": "half-width closure", "category": "高速公路", "definition": "封闭一半车道、另半幅借道双向通行的施工管制方式。", "colloquial": ["半边修路", "借对向道走"], "related": ["交通管制", "借道通行"]}
 {"id": "FWY-0052", "term_zh": "借道通行", "term_en": "contraflow / crossover traffic", "category": "高速公路", "definition": "借用对向车道维持通行的临时交通组织方式。", "colloquial": ["借对面道开", "逆行道借用"], "related": ["半幅封闭", "交通管制"]}
 {"id": "FWY-0053", "term_zh": "分流诱导", "term_en": "traffic diversion guidance", "category": "高速公路", "definition": "以标志、情报板与导航引导车辆提前驶离受阻路段的措施。", "colloquial": ["提前下高速绕行", "分流"], "related": ["交通管制", "可变情报板"]}
 {"id": "FWY-0054", "term_zh": "恶劣天气管控", "term_en": "adverse weather traffic management", "category": "高速公路", "definition": "雾、雪、冰等天气下的限速、限车型、间隔放行乃至封闭等分级管控。", "colloquial": ["大雾封路", "雪天管制"], "related": ["交通管制", "路面结冰"]}
 {"id": "FWY-0055", "term_zh": "长陡纵坡", "term_en": "long steep downgrade", "category": "高速公路", "definition": "纵坡陡、坡长大的路段，连续长大下坡尤需设置避险车道并提示检查制动。", "colloquial": ["长下坡", "连续大下坡"], "related": ["避险车道", "制动失效"], "standards": "JTG D20 公路路线设计规范"}
-{"id": "FWY-0056", "term_zh": "避险车道", "term_en": "emergency escape ramp", "category": "高速公路", "definition": "设于长陡下坡、以碎石坡床使制动失效车辆减速停车的专用岔道。", "colloquial": ["紧急避险道", "刹车失灵缓冲道"], "related": ["长陡纵坡", "制动失效"], "standards": "JTG D81 公路交通安全设施设计规范"}
+{"id": "FWY-0056", "term_zh": "避险车道", "term_en": "emergency escape ramp", "category": "高速公路", "definition": "设于长陡下坡、以碎石坡床使制动失效车辆减速停车的专用岔道。", "colloquial": ["紧急避险道", "刹车失灵缓冲道", "失控车自救坡"], "related": ["长陡纵坡", "制动失效"], "standards": "JTG D81 公路交通安全设施设计规范"}
 {"id": "FWY-0057", "term_zh": "制动失效", "term_en": "brake failure", "category": "高速公路", "definition": "车辆制动系统因连续制动过热等原因失去制动效能的故障状态。", "colloquial": ["刹车失灵", "刹不住车"], "related": ["避险车道", "长陡纵坡"]}
 {"id": "FWY-0058", "term_zh": "隧道群", "term_en": "tunnel group", "category": "高速公路", "definition": "连续多座隧道组成的路段，通风照明与应急联动要求高。", "colloquial": ["连着好几个隧道", "一个接一个的隧道", "穿过去又是一条隧道"], "related": ["隧道", "隧道监控"]}
 {"id": "FWY-0059", "term_zh": "隧道监控", "term_en": "tunnel surveillance and control", "category": "高速公路", "definition": "对隧道内交通、环境与机电设施集中监视控制的系统。", "colloquial": ["隧道里的监控", "管隧道里通风照明的中心", "隧道里那一堆摄像头和传感器"], "related": ["隧道群", "交通监控"]}
@@ -72,7 +72,7 @@
 {"id": "FWY-0072", "term_zh": "断交施工", "term_en": "full-closure construction", "category": "高速公路", "definition": "完全中断交通进行的施工组织方式。", "colloquial": ["全封闭施工", "断路施工"], "related": ["道路封闭", "分流诱导"]}
 {"id": "FWY-0073", "term_zh": "雾区诱导设施", "term_en": "fog-area guidance system", "category": "高速公路", "definition": "沿线布设的雾天道路轮廓与车距警示发光设施。", "colloquial": ["雾天一闪一闪的灯", "雾天一闪一闪引着走的灯", "看不清时路面亮起来那排灯"], "related": ["恶劣天气管控", "恶劣天气预警"]}
 {"id": "FWY-0074", "term_zh": "恶劣天气预警", "term_en": "adverse weather warning", "category": "高速公路", "definition": "对影响通行的雾、雨、雪、冰、风等天气的监测与发布预警。", "colloquial": ["大雾预警", "结冰预警"], "related": ["恶劣天气管控", "气象检测器"]}
-{"id": "FWY-0075", "term_zh": "路面结冰", "term_en": "road surface icing", "category": "高速公路", "definition": "低温降水或桥面结冰导致的滑溜隐患，桥隧段尤甚。", "colloquial": ["桥面结冰", "暗冰", "路面冻冰"], "related": ["恶劣天气管控", "湿滑路面"]}
+{"id": "FWY-0075", "term_zh": "路面结冰", "term_en": "road surface icing", "category": "高速公路", "definition": "低温降水或桥面结冰导致的滑溜隐患，桥隧段尤甚。", "colloquial": ["桥面结冰", "暗冰", "路面冻冰", "黑冰"], "related": ["恶劣天气管控", "湿滑路面"]}
 {"id": "FWY-0076", "term_zh": "团雾", "term_en": "patchy fog", "category": "高速公路", "definition": "局部突发、能见度骤降的雾团，是高速连环事故重要诱因。", "colloquial": ["一团一团的雾", "突起大雾"], "related": ["恶劣天气预警", "连环追尾"]}
 {"id": "FWY-0077", "term_zh": "交通广播", "term_en": "traffic radio broadcast", "category": "高速公路", "definition": "以广播频道发布路况与管制信息的服务。", "colloquial": ["交通台", "路况广播"], "related": ["可变情报板", "出行者信息系统"]}
 {"id": "FWY-0078", "term_zh": "高速巡检", "term_en": "freeway patrol", "category": "高速公路", "definition": "对路段设施与交通状态的巡查检视工作。", "colloquial": ["路巡", "巡查车"], "related": ["交通事件", "养护工区"]}
@@ -88,3 +88,6 @@
 {"id": "FWY-0088", "term_zh": "出入口间距", "term_en": "interchange spacing", "category": "高速公路", "definition": "相邻互通之间的距离，影响集散交通与主线运行。", "colloquial": ["出口之间隔多远", "两个出口之间隔多远", "上一个口到下一个口的距离"], "related": ["互通式立体交叉", "出入口管理"]}
 {"id": "FWY-0089", "term_zh": "追尾事故多发路段", "term_en": "rear-end crash prone segment", "category": "高速公路", "definition": "统计上追尾事故显著集中的路段，常伴随拥堵尾端与雾区。", "colloquial": ["老追尾的那段", "老撞车尾的那段路", "一年到头连环追尾的地方"], "related": ["追尾", "团雾"]}
 {"id": "FWY-0090", "term_zh": "通行能力提升", "term_en": "capacity improvement", "category": "高速公路", "definition": "通过扩建、匝道控制与交通组织提高路段通行能力的综合措施。", "colloquial": ["扩容改造", "提升容量"], "related": ["改扩建工程", "通行能力"]}
+{"id": "FWY-0091", "term_zh": "横风区", "term_en": "crosswind-prone section", "category": "高速公路", "definition": "强侧风多发、易影响行车稳定性的路段，常见于桥面与垭口。", "colloquial": ["横风区", "注意横风", "大风路段"], "related": ["团雾", "恶劣天气预警"], "surface": {"注意横风": "注意横风（横风区）"}}
+{"id": "FWY-0092", "term_zh": "主线", "term_en": "mainline", "category": "高速公路", "definition": "高速公路不含匝道与收费广场的基本行车部分。", "colloquial": ["主线", "主道", "正线"], "related": ["基本路段", "出口匝道"], "disambiguation": "「主线／主道」在高速公路语境（相对匝道、收费广场）指本词条；城市道路里与辅路相对的主路见 ROAD-0058。"}
+{"id": "FWY-0093", "term_zh": "加油站", "term_en": "gas station", "category": "高速公路", "definition": "设在服务区或沿线、为机动车加注燃油的场所，高速公路上通常与 service 区合建。", "colloquial": ["加油站"], "related": ["服务区", "充电站"]}

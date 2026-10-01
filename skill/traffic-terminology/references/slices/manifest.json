@@ -4,57 +4,57 @@
   {
    "prefix": "ROAD",
    "category": "道路与基础设施",
-   "entries": 103,
-   "colloquial": 290,
+   "entries": 116,
+   "colloquial": 329,
    "file": "slices/ROAD.json"
   },
   {
    "prefix": "INTX",
    "category": "交叉口与标志标线",
-   "entries": 96,
-   "colloquial": 237,
+   "entries": 100,
+   "colloquial": 251,
    "file": "slices/INTX.json"
   },
   {
    "prefix": "SIG",
    "category": "交通信号控制",
    "entries": 115,
-   "colloquial": 302,
+   "colloquial": 304,
    "file": "slices/SIG.json"
   },
   {
    "prefix": "FLOW",
    "category": "交通流与拥堵",
-   "entries": 95,
-   "colloquial": 239,
+   "entries": 100,
+   "colloquial": 257,
    "file": "slices/FLOW.json"
   },
   {
    "prefix": "TRANSIT",
    "category": "公共交通",
-   "entries": 101,
-   "colloquial": 254,
+   "entries": 111,
+   "colloquial": 280,
    "file": "slices/TRANSIT.json"
   },
   {
    "prefix": "FWY",
    "category": "高速公路",
-   "entries": 90,
-   "colloquial": 219,
+   "entries": 93,
+   "colloquial": 229,
    "file": "slices/FWY.json"
   },
   {
    "prefix": "ITS",
    "category": "智能交通",
-   "entries": 91,
-   "colloquial": 230,
+   "entries": 96,
+   "colloquial": 244,
    "file": "slices/ITS.json"
   },
   {
    "prefix": "SAFE",
    "category": "交通安全 / 静态交通（停车）",
-   "entries": 116,
-   "colloquial": 275,
+   "entries": 135,
+   "colloquial": 330,
    "file": "slices/SAFE.json"
   }
  ]

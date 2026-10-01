@@ -1,10 +1,12 @@
 name: Deploy to GitHub Pages
 
-# web/ 是零依赖静态页，没有构建步骤：直接把四个文件当产物上传。
+# web/ 是零依赖静态页，没有构建步骤：直接把目录当 artifact 上传。
 # 发布后地址是 https://luz7818.github.io/traffic-terminology/（项目页路径 = 仓库名）。
+# main 与 master 都触发：仓库正在从 master 过渡到 main（与其余仓库一致），
+# GitHub 端默认分支在 Settings → Branches 切换之前，推旧名也不会漏发布。
 on:
   push:
-    branches: [master]
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:

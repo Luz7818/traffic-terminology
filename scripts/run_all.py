@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""一条命令跑完全部构建与校验：validate -> build_index -> build_web -> query 回归用例。
+"""一条命令跑完全部构建与校验：validate -> build_index -> build_web -> query 回归 -> 网页回归。
 
 任一步失败即中止并以非 0 退出，避免数据与索引/网页长期不同步。
 用法：python scripts/run_all.py
@@ -18,6 +18,7 @@ STEPS = [
     ("生成反向索引", ["build_index.py"]),
     ("生成网页数据", ["build_web.py"]),
     ("查询回归用例", ["query.py", "--check"]),
+    ("网页匹配回归", ["web_check.py"]),
 ]
 
 

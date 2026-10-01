@@ -21,17 +21,19 @@ Windows 上如果命令输出是乱码，先执行 `set PYTHONIOENCODING=utf-8`�
 ### 2.1 手工查词、转换一段话（网页，最快）
 
 1. 双击打开 `web/index.html`（不需要启动服务器），或者直接用在线上版本
-   <https://luz7818.github.io/traffic-terminology/>——同一份文件，推 `master` 时由 CI 发布。
+   <https://luz7818.github.io/traffic-terminology/>——同一份文件，推 `main` 时由 CI 发布。
 2. 顶部两个标签：**口语转换** 与 **术语库**。
 3. 「口语转换」：把整段口语粘进输入框，按 `Ctrl+Enter` 或点「转换」。结果区给出
    术语化改写（命中的词高亮）、原文对照、以及每个术语的卡片（中英、定义、领域、
    关联词、国标依据、消歧提示）。卡片右上角可复制。
 4. 「术语库」：按术语/英文/口语/定义全文搜索，用领域标签筛选，点卡片看完整详情。
-   底部状态条显示当前规模：807 条术语 · 2036 个口语匹配键（复核：`python scripts/build_web.py`
+   底部状态条显示当前规模：866 条术语 · 2211 个口语匹配键（复核：`python scripts/build_web.py`
    后看 `web/data.js` 第一行 meta）。
 5. 转换历史存在浏览器本地（`localStorage`），关掉页面还在；清空浏览器数据会没。
 
-网页的两个行为要提前知道：消歧取第一个候选、改写是字面替换。第 5 节有例子。
+网页的行为要提前知道：消歧取按分值排序后的第一个候选（口径与命令行一致，但不看上下文）；
+改写先按词条的 `surface` 句中形式（没有则按术语）替换、再过一遍字面平滑规则，
+能避免大部分病句，但长句仍可能不顺，第 5 节有例子。
 
 ### 2.2 脚本或终端里取术语（命令行）
 
@@ -60,11 +62,11 @@ python scripts/query.py --check             # 跑 26 条固定回归用例
 26/26 用例通过
 ```
 
-匹配度是 `scripts/query.py` 的 `score()` 给出的固定档位整数，只用于排序，不是概率：
+匹配度是 `scripts/corpus.py` 的 `score()` 给出的固定档位整数，只用于排序，不是概率：
 
 | 命中方式 | 分值 |
 |---|---|
-| 与某个 `colloquial` 写法完全相同 | 100 |
+| 与某个 `colloquial` 写法完全相同（含「马路牙子（北方）」去掉括注后相同） | 100 |
 | 与标准中文术语 `term_zh` 或英文 `term_en` 完全相同 | 90 |
 | 是某个 `colloquial` 的子串，或反过来包含它 | 80 |
 | 与 `term_zh` 互为子串 | 70 |
@@ -73,7 +75,7 @@ python scripts/query.py --check             # 跑 26 条固定回归用例
 | 命中某条的 `definition` 定义文本 | 30 |
 
 一条说法同时满足多项时取最高分，所以「马路牙子」能对到 `路缘石`（库里写法是
-`马路牙子（北方）`，属子串命中，80 分）。命中条数超过 8 条时只打印前 8 条，
+`马路牙子（北方）`，去括注后完全相同，100 分）。命中条数超过 8 条时只打印前 8 条，
 末尾用「… 其余 N 条略」提示，`-v` 不改变这个上限。
 
 ### 2.3 让 AI 助手使用这套词表（Skill）
@@ -89,8 +91,8 @@ python scripts/query.py --check             # 跑 26 条固定回归用例
 
 上下文预算紧时的读法（`SKILL.md` 里也写了）：先看 `references/slices/manifest.json`
 （1.3 KB，列出 8 个分片各自管哪一类），再只加载相关分片 `slices/<前缀>.json`
-（每片 34.5–47.3 KB）。但库里存在 12 组跨词条的歧义口语（复核：`python scripts/validate.py`
-末行），领域判断不准时应回查整包 `colloquial_index.json`（319 KB）。
+（每片 35.7–50.0 KB）。但库里存在 13 组跨词条的歧义口语（复核：`python scripts/validate.py`
+末行），领域判断不准时应回查整包 `colloquial_index.json`（342 KB）。
 
 ## 3. 数据放在哪、怎么读
 
@@ -102,7 +104,7 @@ python scripts/query.py --check             # 跑 26 条固定回归用例
 ### 4.1 加一条术语
 
 1. 打开对应领域的文件（`data/03_signal_control.jsonl` 等），在**文件末尾**追加一行 JSON。
-2. `id` 用该前缀下的下一个序号，四位补零，例如 SIG 现有最大到 `SIG-0115`，新词写 `SIG-0116`。
+2. `id` 用该前缀下的下一个序号，四位补零，例如 SIG 现有最大到 `SIG-0116`，新词写 `SIG-0117`。
    已删除的 ID 不复用。
 3. 必填 `id` / `term_zh` / `term_en` / `category` / `definition` / `colloquial`。
    `colloquial` 至少 1 个，实际请给 2 个以上并尽量覆盖不同地域说法（便道/人行道、
@@ -126,14 +128,17 @@ python scripts/run_all.py
 
 ### 4.3 改匹配或排序逻辑
 
-改 `web/app.js`（网页侧匹配在 `convert()`）或 `scripts/query.py`。改完必跑：
+改 `scripts/corpus.py` 的 `score()`（CLI 检索与网页候选排序共用它）、`scripts/query.py`
+或 `web/app.js`。改完必跑：
 
 ```bash
-python scripts/query.py --check
+python scripts/run_all.py
 ```
 
-26 条回归用例断言的是"典型口语的首选命中不变"，任何召回倒退都会在这里暴露。
-网页侧没有自动用例，改完请手动复测第 2.1 节里的输入。
+它包含 26 条查询回归（断言"典型口语的首选命中不变"）与网页回归——后者逐键比对
+`web/data.js` 的候选顺序与 CLI 分值，并用 node 加载真实的 `web/app.js` 跑 36 条
+句子转换用例。只改 `web/app.js` 时 `query.py --check` 不会报错，务必让
+`web_check.py`（run_all 已包含）也通过，再手动点一遍页面。
 
 ## 5. 常见故障
 
@@ -146,7 +151,8 @@ python scripts/query.py --check
 | 查询结果只列出 8 条，末尾「… 其余 N 条略」 | 命令行固定只展开前 8 条 | 换更长的输入缩小范围；`-v` 不会放宽这个上限 |
 | `run_all.py` 中途 `[中止] 数据校验 失败（退出码 1）` | 数据不合法，索引和网页都没重建 | 按报错里的文件名与 ID 修数据，再重跑 |
 | 重建后 `git diff` 显示 `web/data.js` 变了 | 正常：数据确实变了。产物不含时间戳，不会有无意义的改动 | 把生成物和源数据一起提交 |
-| 转换结果把城市语境说成高速 | 网页消歧取第一个候选 | 用 Skill，或在 `-v` 结果里人工确认 |
+| 转换结果把城市语境说成高速 | 网页消歧取按分值排序的首个候选，不看上下文 | 用 Skill，或在 `-v` 结果里人工确认；歧义候选在网页术语卡片「该说法也可指」里列出 |
+| 转换结果读起来不通顺 | `surface` 与平滑规则是有限枚举，覆盖不到的句式仍会生硬 | 把该说法报成新词条的 `surface` 字段（见 `data/README.md`），或以术语对照为准人工改写 |
 | 线上演示页文字都在、点什么都没反应，控制台里 `data.js` / `app.js` 是 404 | 访问地址少了末尾斜杠（`/traffic-terminology`），相对路径的基准变成站点根 | 用带斜杠的 `https://luz7818.github.io/traffic-terminology/`；GitHub Pages 会自动补这个斜杠，别把链接改成不带斜杠的 |
 | 推 `master` 后发布工作流红在 `Run actions/configure-pages@v5`，报 `Error: Get Pages site failed. Please verify that the repository has Pages enabled and configured to build using GitHub Actions` | 这个仓的 Pages 还没开过，而 workflow 的 token 也没有开启它的权限 | 到 `Settings → Pages → Source` 选 **GitHub Actions**（人工点一次即可），再重跑工作流；细节见 `AGENTS.md` 关键约定 11 |
 
@@ -154,7 +160,7 @@ python scripts/query.py --check
 
 | 词 | 在这里指什么 |
 |---|---|
-| 语料库 | 一批结构化的语言样本，这里指 807 条术语记录本身 |
+| 语料库 | 一批结构化的语言样本，这里指 866 条术语记录本身 |
 | 口语说法（`colloquial`） | 日常怎么说的自然语言写法，是查表的入口 |
 | 消歧 / 歧义口语 | 同一句口语能对应多个术语，需要按语境决定取哪个 |
 | `disambiguation` | 记录"什么语境取哪个"的字段，把判断从提示词挪进数据 |
@@ -164,9 +170,9 @@ python scripts/query.py --check
 | 国标 / 行标 | 国家标准（GB）/ 行业标准（CJJ、JTG 等），术语的出处依据 |
 | 回归用例 | 一组固定输入与期望输出，用来确认改动没把原来的能力弄坏 |
 
-两种口语计数口径别混：原始写法去重是 2038 个（`README.md` 用的口径），
-去掉括注后再去重的匹配键是 2036 个（`web/data.js` 与网页状态条用的口径），
-差在「地道」「闪黄灯」两组带括注写法并入了主形。
+两种口语计数口径别混：原始写法去重是 2178 个（`README.md` 用的口径），
+去掉括注后再去重的匹配键是 2207 个（`web/data.js` 与网页状态条用的口径），
+差在「地道」「闪黄灯」「便道」「马葫芦盖」四组带括注写法并入了同名键。
 
 ## 7. 改完之后跑什么
 
@@ -175,5 +181,7 @@ python scripts/run_all.py
 ```
 
 通过标准：退出码 0，末行输出 `[完成] 全部校验与构建通过，data / 索引 / 网页已同步`，
-其中包含校验 807 条「错误 0 项，警告 0 项」、`26/26 用例通过`。这几条命令各自管什么的说明在仓库根的
+其中包含校验 866 条「错误 0 项，警告 0 项」、`26/26 用例通过`、网页侧
+「2999 个键……全部一致」与「36/36 条句子转换用例通过」（本机没有 node 时该两项
+退化为「消歧一致性 OK」+ 跳过提示）。这几条命令各自管什么的说明在仓库根的
 [AGENTS.md](../AGENTS.md)。

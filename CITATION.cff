@@ -1,0 +1,23 @@
+# 引用信息（CITATION）
+cff-version: 1.2.0
+title: 交通用语语料库（Traffic Terminology Corpus）
+type: dataset
+version: 1.1.0
+date-released: "2026-09-30"
+license: CC-BY-4.0
+repository-code: "https://github.com/Luz7818/traffic-terminology"
+url: "https://luz7818.github.io/traffic-terminology/"
+keywords:
+  - 交通工程
+  - 术语库
+  - 中英对照
+  - 口语规范化
+  - traffic terminology
+  - corpus
+authors:
+  - alias: Luz7818
+    website: "https://github.com/Luz7818"
+message: >-
+  把日常口语、模糊的交通表述对应到标准交通工程术语的数据集：
+  807 条术语、2038 个口语说法、9 类领域，中英对照，含定义、关联词与消歧说明。
+  数据本体见 data/ 目录（data/VERSION 为数据集版本号）。
