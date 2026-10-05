@@ -251,14 +251,7 @@
   }
 
   function buildGroupKeyMap(terms) {
-    // 分组序号 -> 由原文片段与主词条定位
-    var map = {};
-    terms.forEach(function (g, i) {
-      g.frags.forEach(function (f) {
-        map[f + '|' + entries[g.idx].id] = i;
-      });
-    });
-    // 用 id 索引不便，重建为 idx 索引
+    // 分组序号 -> 以「原文片段|词条idx」为键(用 id 索引不便,直接以 idx 为键)
     var map2 = {};
     terms.forEach(function (g, i) {
       g.frags.forEach(function (f) {
