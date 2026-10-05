@@ -17,7 +17,7 @@
 | `build_index.py` | 生成反向索引与分片 | 写 `skill/traffic-terminology/references/colloquial_index.json` 与 `slices/<前缀>.json` + `manifest.json`；正文只存一份，索引仅存 ID 列表，避免同一条目被多个口语重复展开 |
 | `build_web.py` | 生成网页数据 | 写 `web/data.js`；匹配键 = 去掉「（北方）」等括注后的口语说法 + 标准中文术语；每个键的候选按 `corpus.score()` 对该键的分值降序、平手保持文件序——网页「取首个候选」由此与 CLI「首选命中」同口径 |
 | `query.py` | 命令行查询 | 支持中文术语、英文、口语、定义部分匹配，按匹配度降序；`-v` 追打定义/关联/标准；`--check` 跑 26 条固定回归用例 |
-| `web_check.py` | 网页侧回归 | ① 纯 Python：2999 个匹配键的候选顺序逐一与 CLI 分值排序比对；② node 可用时真跑 `web/app.js` 断言 36 条句子转换用例（含方言与地区用例，用例可带地区代码），node 缺失则跳过该项并提示 |
+| `web_check.py` | 网页侧回归 | ① 纯 Python：3003 个匹配键的候选顺序逐一与 CLI 分值排序比对；② node 可用时真跑 `web/app.js` 断言 36 条句子转换用例（含方言与地区用例，用例可带地区代码），node 缺失则跳过该项并提示 |
 | `web_harness.mjs` | node 测试通道 | 给 `web_check.py` 调用：在 `window` 打桩后加载真实的 `web/data.js` 与 `web/app.js`（浏览器外模式只执行纯函数核心 `TrafficMatcher`），从 stdin 读用例、输出转换结果 JSON。断言都在 Python 侧 |
 
 `validate.py` 里有一张 `STANDARDS_REGISTRY`（23 条标准编号与规范名称的对应表，
@@ -40,7 +40,7 @@ python scripts/web_check.py        # 只跑网页回归（消歧一致性 + node
 
 成功判据：`run_all.py` 退出码 0，末行 `[完成] 全部校验与构建通过，data / 索引 / 网页已同步`；
 `validate.py` 报「错误 0 项，警告 0 项」；`--check` 报「26/26 用例通过」；
-`web_check.py` 报「2999 个键……全部一致」与「36/36 条句子转换用例通过」。
+`web_check.py` 报「3003 个键……全部一致」与「36/36 条句子转换用例通过」。
 
 ## 数据文件清单只写一处
 
