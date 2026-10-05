@@ -4,9 +4,9 @@
 
 ## 分支与提交策略
 
-- 分支 `main`（本仓曾是 `master`，2026-09 已本地改名；workflow 里 `main`、`master` 都触发
-  发布）。GitHub 端默认分支若还没在 Settings → Branches 切到 `main`，推送 `main` 后记得切；
-  切换前推 `master` 也能发布，不会静默丢更新。
+- 分支 `main`（本仓曾是 `master`，2026-09 本地改名；GitHub 端默认分支已于 2026-10-05 切到
+  `main`，远端 `master` 同日删除——内容完全包含于 `main`，零丢失；workflow 里 `main`、
+  `master` 都触发发布）。
 - **一批一提交**：数据、产物、文档同步变化必须在同一次提交里。**不要把 `web/data.js` 或
   `skill/references/` 的改动单独提交而不带源数据改动**——那说明源数据没同步，反了。
 - 提交前门禁：`python scripts/run_all.py`（见 [TESTING.md](TESTING.md)）。
