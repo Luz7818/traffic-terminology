@@ -13,10 +13,16 @@
 import json
 from pathlib import Path
 
-from corpus import DATA_DIR, FILE_ORDER, clean_phrase, score
+from corpus import DATA_DIR, FILE_ORDER, clean_phrase, load_entries, score
 
 ROOT = Path(__file__).resolve().parent.parent
 WEB_DIR = ROOT / "web"
+
+# load_entries 对缺失文件静默跳过,而本脚本的约定是缺文件必须拦下
+# (scripts/README「文件缺失时的表现」),先显式核对再读。
+for filename in FILE_ORDER:
+    if not (DATA_DIR / filename).exists():
+        raise FileNotFoundError(DATA_DIR / filename)
 
 entries = []
 recs = []        # 与 entries 同序的原始记录，供候选排序时打分
@@ -24,52 +30,45 @@ phrase_map = {}  # 匹配键 -> [词条下标（按该键的 CLI 分值降序，
 max_len = 2
 col_keys = set()
 
-for filename in FILE_ORDER:
-    path = DATA_DIR / filename
-    with path.open(encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            rec = json.loads(line)
-            entry = {
-                "id": rec["id"],
-                "zh": rec["term_zh"],
-                "en": rec["term_en"],
-                "cat": rec["category"],
-                "def": rec["definition"],
-                "col": rec["colloquial"],
-                "rel": rec.get("related", []),
-            }
-            if rec.get("standards"):
-                entry["std"] = rec["standards"]
-            if rec.get("disambiguation"):
-                entry["dis"] = rec["disambiguation"]
-            if rec.get("surface"):
-                sf = {}
-                for k, v in rec["surface"].items():
-                    ck = clean_phrase(k)
-                    if ck and ck not in sf:
-                        sf[ck] = v
-                if sf:
-                    entry["sf"] = sf
-            idx = len(entries)
-            entries.append(entry)
-            recs.append(rec)
+for rec in load_entries():
+    entry = {
+        "id": rec["id"],
+        "zh": rec["term_zh"],
+        "en": rec["term_en"],
+        "cat": rec["category"],
+        "def": rec["definition"],
+        "col": rec["colloquial"],
+        "rel": rec.get("related", []),
+    }
+    if rec.get("standards"):
+        entry["std"] = rec["standards"]
+    if rec.get("disambiguation"):
+        entry["dis"] = rec["disambiguation"]
+    if rec.get("surface"):
+        sf = {}
+        for k, v in rec["surface"].items():
+            ck = clean_phrase(k)
+            if ck and ck not in sf:
+                sf[ck] = v
+        if sf:
+            entry["sf"] = sf
+    idx = len(entries)
+    entries.append(entry)
+    recs.append(rec)
 
-            keys = []
-            for c in rec["colloquial"]:
-                k = clean_phrase(c)
-                if k and k not in keys:
-                    keys.append(k)
-                    col_keys.add(k)
-            if rec["term_zh"] not in keys:
-                keys.append(rec["term_zh"])
-            for k in keys:
-                ids = phrase_map.setdefault(k, [])
-                if idx not in ids:
-                    ids.append(idx)
-                max_len = max(max_len, len(k))
+    keys = []
+    for c in rec["colloquial"]:
+        k = clean_phrase(c)
+        if k and k not in keys:
+            keys.append(k)
+            col_keys.add(k)
+    if rec["term_zh"] not in keys:
+        keys.append(rec["term_zh"])
+    for k in keys:
+        ids = phrase_map.setdefault(k, [])
+        if idx not in ids:
+            ids.append(idx)
+        max_len = max(max_len, len(k))
 
 # 消歧口径统一：每个键的候选顺序 = 把键当作查询词时 CLI 的命中排序
 for k, ids in phrase_map.items():

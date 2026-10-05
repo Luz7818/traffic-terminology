@@ -23,9 +23,6 @@ from corpus import PREFIX_BY_FILE
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 
-# 文件名前缀 -> 允许的 ID 前缀（清单与顺序见 corpus.DATA_FILES）
-FILE_PREFIX_MAP = PREFIX_BY_FILE
-
 REQUIRED_FIELDS = ["id", "term_zh", "term_en", "category", "definition", "colloquial"]
 ID_PATTERN = re.compile(r"^[A-Z]+-\d{4}$")
 
@@ -78,7 +75,7 @@ total = 0
 per_file = defaultdict(lambda: [0, 0])  # 文件 -> [词条数, 标了 standards 的条数]
 unregistered = defaultdict(list)  # 带编号但不在登记表里的 standards -> 出现位置
 
-for filename, expected_prefix in FILE_PREFIX_MAP.items():
+for filename, expected_prefix in PREFIX_BY_FILE.items():
     path = DATA_DIR / filename
     if not path.exists():
         errors.append(f"[缺失] 数据文件不存在: {filename}")
