@@ -41,9 +41,9 @@
 | `switchTab(name)` | 两个标签页互斥显示 |
 | `loadHistory()` / 相关写入 | 转换历史，存 `localStorage`，键名 `tt_history`，清浏览器数据即丢 |
 
-## 已知的两个行为特征
+## 已知的三个行为特征
 
-这两点都有回归锁定（`scripts/web_check.py`），改动请连用例一起改：
+这三点都有回归锁定（`scripts/web_check.py`），改动请连用例一起改：
 
 1. **消歧取首个候选**：一个口语说法命中多个术语时，改写文本用的是排在前面的那一个。
    候选顺序由 `build_web.py` 按 `corpus.score()` 的分值生成，与命令行「首选命中」同口径；

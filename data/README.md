@@ -19,6 +19,7 @@
 | `06_freeway.jsonl` | 高速公路 | FWY | 93 |
 | `07_its.jsonl` | 智能交通 | ITS | 96 |
 | `08_safety_parking.jsonl` | 交通安全（108）+ 静态交通（停车）（27） | SAFE | 135 |
+| `VERSION` | 语料版本号（非术语数据），一行纯文本，当前 `1.1.0`（复核：`cat data/VERSION`）；发版随内容一起更新 | — | — |
 
 `08` 一个文件里有两类 `category`，所以全库是 8 个文件 / 9 类标签。查某个前缀当前最大 ID：
 

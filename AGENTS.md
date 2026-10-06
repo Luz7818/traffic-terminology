@@ -92,7 +92,7 @@
 | 项 | 值 | 复核命令 |
 |---|---|---|
 | 词条数 | 866 条 | `python scripts/validate.py` |
-| 数据校验 | 错误 0 项；警告仅两类非数据项——候选池地区提示（候选属于尚无正式库的地区）与多地区共挂说明，均不阻断门禁 | `python scripts/validate.py` 看末行汇总 |
+| 数据校验 | 错误 0 项；警告仅三类非数据项——候选池地区提示（候选属于尚无正式库的地区）、「已是正式说法，请从候选池移除」提示与多地区共挂说明，均不阻断门禁 | `python scripts/validate.py` 看末行汇总 |
 | 歧义口语 | 13 组，均带消歧字段 | `python scripts/validate.py` |
 | 查询回归 | 26/26 用例通过 | `python scripts/query.py --check` |
 | 网页回归 | 消歧一致 3003 键 + 句子转换 36/36（node 真跑 `web/app.js`，含方言用例） | `python scripts/web_check.py` |

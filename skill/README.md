@@ -13,7 +13,7 @@ Skill 的作用是把「口语 → 标准术语」这件事交给模型时，给
 | `traffic-terminology/SKILL.md` | 技能说明与工作流程：识别口语表述 → 查索引 → 按消歧规则选择 → 按规定格式输出 | 含 8 个 ID 前缀的领域对照表与消歧规则 |
 | `traffic-terminology/references/colloquial_index.json` | 反向索引：`口语说法 → [词条 ID]`，加上一份 `entries` 正文表 | **脚本产物**，约 352 KB |
 | `traffic-terminology/references/slices/manifest.json` | 8 个分片的目录：前缀、类别、条数、文件名 | **脚本产物**，1.3 KB |
-| `traffic-terminology/references/slices/<前缀>.json` | ROAD / INTX / SIG / FLOW / TRANSIT / FWY / ITS / SAFE 各一片 | **脚本产物**，每片 35.7–53.2 KB |
+| `traffic-terminology/references/slices/<前缀>.json` | ROAD / INTX / SIG / FLOW / TRANSIT / FWY / ITS / SAFE 各一片 | **脚本产物**，每片 36.0–53.7 KB |
 
 ## 子目录
 
@@ -25,7 +25,7 @@ Skill 的作用是把「口语 → 标准术语」这件事交给模型时，给
 不在它们里面再开 `README.md`（那会被工具当成 Skill 的一部分读进上下文）。这两层里的东西
 全部由 `scripts/build_index.py` 写出，没有一份手写文件。
 
-「文件清单」里三个体积数字（352 KB / 1.3 KB / 35.7–53.2 KB）的复核，在仓库根执行后把字节数
+「文件清单」里三个体积数字（352 KB / 1.3 KB / 36.0–53.7 KB）的复核，在仓库根执行后把字节数
 除以 1024：
 
 ```bash
@@ -35,7 +35,8 @@ wc -c skill/traffic-terminology/references/colloquial_index.json skill/traffic-t
 ## 为什么索引要另存一份
 
 网页用 `web/data.js`，Skill 用 `references/`，两份都从 `data/*.jsonl` 重建。
-分开的原因是体积与读法：模型一次读入 295 KB 的整页数据太浪费上下文，所以索引做成
+分开的原因是体积与读法：模型一次读入 324 KB 的整页数据（复核：`wc -c web/data.js`）
+太浪费上下文，所以索引做成
 归一化结构（正文只存一份，`index` 只放 ID 列表），再按前缀切片，让模型先看 1.3 KB 的
 目录、只加载相关的那一片。
 
@@ -84,8 +85,8 @@ Qoder、Claude 等工具的 skills 目录位置各不相同，放对目录后工
 - `references/` 下全部是生成物，手改会被 `python scripts/build_index.py` 覆盖。
 - `SKILL.md` 里的输出格式约定（术语 / 英文 / 定义 / 领域 / 消歧）与网页卡片字段是
   同一套语义，改一边记得对照另一边。
-- `SKILL.md` 正文里写死的三组数字 —— 863 条词条 / 2211 个口语说法 / 13 组歧义口语，
-  以及 350 KB、1.3 KB、每片 35.7–53.0 KB 这几个体积 —— 都是产物的当前值（复核：
+- `SKILL.md` 正文里写死的三组数字 —— 866 条词条 / 2215 个口语说法 / 13 组歧义口语，
+  以及 352 KB、1.3 KB、每片 36.0–53.7 KB 这几个体积 —— 都是产物的当前值（复核：
   `python scripts/build_index.py` 的首行与末两行）。数据一改它们就旧了，脚本不会替你改。
 - `SKILL.md` 的 frontmatter（`name: traffic-terminology` 与 `description`）是工具列出这份
   Skill 的凭据，看着像注释，删掉或改名会让它压根不被加载，也就没有"查库内译法"这回事。
