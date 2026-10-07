@@ -139,14 +139,14 @@
   function maskForScan(text) {
     var out = text;
     MASK_TERMS.forEach(function (t) {
-      out = out.split(t).join(new Array(t.length + 1).join('\u0001'));
+      out = out.replaceAll(t, '\u0001'.repeat(t.length));
     });
     return out;
   }
 
   function smooth(text) {
     SMOOTH_RULES.forEach(function (r) {
-      text = text.split(r[0]).join(r[1]);
+      text = text.replaceAll(r[0], r[1]);
     });
     return text;
   }
@@ -252,13 +252,13 @@
 
   function buildGroupKeyMap(terms) {
     // 分组序号 -> 以「原文片段|词条idx」为键(用 id 索引不便,直接以 idx 为键)
-    var map2 = {};
+    var map = {};
     terms.forEach(function (g, i) {
       g.frags.forEach(function (f) {
-        map2[f + '|' + g.idx] = i;
+        map[f + '|' + g.idx] = i;
       });
     });
-    return map2;
+    return map;
   }
 
   function convert() {
