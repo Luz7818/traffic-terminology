@@ -25,6 +25,10 @@
 - Pages 需在仓库 Settings 人工开启一次（workflow token 开不了）；判据是
   `curl -s -o /dev/null -w '%{http_code}' https://luz7818.github.io/traffic-terminology/`
   得 200，不是 `/pages` API（未登录恒 404）。
+- `github-pages` 环境的部署分支策略只放行过 `master`，2026-10 master→main 迁移后推 `main`
+  一律被环境门禁拒绝（deploy 作业零步骤失败、无日志、日志 API 报 BlobNotFound），曾误判为
+  瞬态失败两次空提交重试均无效；2026-10-12 给策略补上 `main` 后恢复。之后部署失败先查
+  环境分支策略，重跑失败作业即可，不需要空提交。
 - tag：数据集 v1.1.0 已打 tag 并发 GitHub Release（2026-10-12，指向含 CITATION 数字更正的提交，
   Release 页 <https://github.com/Luz7818/traffic-terminology/releases/tag/v1.1.0>）。
 

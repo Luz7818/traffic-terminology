@@ -111,9 +111,12 @@ skill/traffic-terminology/references/：脚本产物，可脱离 data/ 独立使
 10. **`web/` 是 luzzz.me 的复制源**——冻结路径：目录名 + `index.html/style.css/app.js/data.js`
     四文件名被 `luzzz.me/tools/sync-showcases.mjs` 逐字引用；动了源必须到 luzzz.me 重跑
     `pnpm sync:showcases && pnpm build` 并核对子页面。
-11. **Pages 两个不显然的点**——workflow 无构建步骤；Pages 必须在仓库 Settings 人工开启一次
-    （token 开不了，`enablement: true` 也会报 Resource not accessible）。未登录时
-    `GET /repos/.../pages` 恒 404，别当判据——判据是 `curl` 站点本体得 200。
+11. **Pages 三个不显然的点**——workflow 无构建步骤；Pages 必须在仓库 Settings 人工开启一次
+    （token 开不了，`enablement: true` 也会报 Resource not accessible）；`github-pages` 环境
+    的部署分支策略必须包含当前默认分支——2026-10 master→main 迁移后策略只放行 `master`，
+    推 `main` 全部被环境门禁拒绝（deploy 作业零步骤失败、无日志、日志 API 报 BlobNotFound），
+    两次空提交重试因此无效、被误判为瞬态失败，2026-10-12 补 `main` 恢复（见 HISTORY 当日）。
+    未登录时 `GET /repos/.../pages` 恒 404，别当判据——判据是 `curl` 站点本体得 200。
 12. **方言层主库优先**——与主库口语键撞车的方言词条 validate 记 warning；方言键过宽匹配
     （如「油路」⊂「加油路口」）靠 `web_check.py` 用例与 `app.js` 的 `MASK_TERMS` 收窄。
 13. **静态资源缓存参数**——`?v=数据集版本-u<序号>`，改 `web/` 源文件就递增序号。
