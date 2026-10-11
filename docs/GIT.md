@@ -25,7 +25,8 @@
 - Pages 需在仓库 Settings 人工开启一次（workflow token 开不了）；判据是
   `curl -s -o /dev/null -w '%{http_code}' https://luz7818.github.io/traffic-terminology/`
   得 200，不是 `/pages` API（未登录恒 404）。
-- tag：数据集 v1.1.0 尚未打 tag（`TODO.md` 任务 1）。
+- tag：数据集 v1.1.0 已打 tag 并发 GitHub Release（2026-10-12，指向含 CITATION 数字更正的提交，
+  Release 页 <https://github.com/Luz7818/traffic-terminology/releases/tag/v1.1.0>）。
 
 ## commit message
 
