@@ -58,7 +58,7 @@ python scripts/build_index.py     # 或 python scripts/run_all.py
 2. 让助手转换一句「早高峰那个红绿灯路口加塞太严重」。
    回答里应出现库内标准译法（信号交叉口 / signalized intersection、
    违法变更车道 / illegal lane changing），而不是模型自己的说法。
-3. 领域不确定时，`SKILL.md` 要求回查整包而不是强行按单片作答 —— 全库有 13 组跨词条
+3. 领域不确定时，`SKILL.md` 要求回查整包而不是强行按单片作答 —— 全库有 12 组跨词条
    歧义口语（复核：`python scripts/validate.py`）。
 
 ## 和谁打交道
@@ -85,7 +85,7 @@ Qoder、Claude 等工具的 skills 目录位置各不相同，放对目录后工
 - `references/` 下全部是生成物，手改会被 `python scripts/build_index.py` 覆盖。
 - `SKILL.md` 里的输出格式约定（术语 / 英文 / 定义 / 领域 / 消歧）与网页卡片字段是
   同一套语义，改一边记得对照另一边。
-- `SKILL.md` 正文里写死的三组数字 —— 866 条词条 / 2215 个口语说法 / 13 组歧义口语，
+- `SKILL.md` 正文里写死的三组数字 —— 866 条词条 / 2215 个口语说法 / 12 组歧义口语，
   以及 352 KB、1.3 KB、每片 36.0–53.7 KB 这几个体积 —— 都是产物的当前值（复核：
   `python scripts/build_index.py` 的首行与末两行）。数据一改它们就旧了，脚本不会替你改。
 - `SKILL.md` 的 frontmatter（`name: traffic-terminology` 与 `description`）是工具列出这份

@@ -23,3 +23,6 @@
 - [x] v1.1.0 打 tag 并发 GitHub Release —— 2026-10-12（tag 指向 CITATION 数字更正提交 1e781e3，
   更正缘由见 HISTORY.md v1.1.0「修正」；Release 页附引用格式）
 - [x] 文档九件体系迁移 + README 数字口径修正 —— 2026-10-05（见 HISTORY.md 对应条目）
+- [x] TR-01「充电桩」消歧数据试点 + TR-04 SKILL.md 数字校准 —— 2026-11-02（体检挂账清偿：
+  「充电桩」首选回归 SAFE-0107 并锁回归用例，歧义 13→12 组，数据集 1.1.1；数字实测口径与
+  证据见 HISTORY.md 同日条目与 核查报告/_体检-2026-11-02/Traffic_terminology-清账.md）

@@ -3,7 +3,7 @@
  "stats": {
   "total_entries": 866,
   "total_colloquial": 2215,
-  "ambiguous_colloquial": 13,
+  "ambiguous_colloquial": 12,
   "files": [
    {
     "file": "01_road_infrastructure.jsonl",
@@ -9144,10 +9144,6 @@
    "ROAD-0058",
    "FWY-0092"
   ],
-  "充电桩": [
-   "FWY-0080",
-   "SAFE-0107"
-  ],
   "公交分担率": [
    "FLOW-0056",
    "TRANSIT-0076"
@@ -10234,6 +10230,9 @@
   ],
   "僵尸车": [
    "SAFE-0109"
+  ],
+  "充电桩": [
+   "SAFE-0107"
   ],
   "充电的柱子": [
    "SAFE-0107"

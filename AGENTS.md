@@ -94,13 +94,13 @@
 |---|---|---|
 | 词条数 | 866 条 | `python scripts/validate.py` |
 | 数据校验 | 错误 0 项；警告仅三类非数据项——候选池地区提示（候选属于尚无正式库的地区）、「已是正式说法，请从候选池移除」提示与多地区共挂说明，均不阻断门禁 | `python scripts/validate.py` 看末行汇总 |
-| 歧义口语 | 13 组，均带消歧字段 | `python scripts/validate.py` |
-| 查询回归 | 26/26 用例通过 | `python scripts/query.py --check` |
+| 歧义口语 | 12 组，均带消歧字段 | `python scripts/validate.py` |
+| 查询回归 | 27/27 用例通过 | `python scripts/query.py --check` |
 | 网页回归 | 消歧一致 3003 键 + 句子转换 36/36（node 真跑 `web/app.js`，含方言用例） | `python scripts/web_check.py` |
 | 句中改写 | 69 个词条带 `surface` 字段；方言层另有若干句中形式（得劲→好走、碰住了→相撞、死火→发生故障、巴士→公交、滑溜→湿滑等） | `python -c "import json,glob;print(sum(1 for g in sorted(glob.glob('data/*.jsonl')) for l in open(g,encoding='utf-8') if l.strip() and json.loads(l).get('surface')))"` |
 | 方言对照库 | 6 个地区（江苏 5、河南 9、广东 5、东北 3、上海 2、四川 4，共 28 条）另设 250 条待核实候选池（candidates.jsonl，机器逐文件精梳两轮、不进产品，validate 校验并聚合地区提示）；通用模式合并全部地区方言、选定地区只叠加该地区，主库优先 | `python -c "import json,glob;print({p.split(chr(92))[-1]: len(json.load(open(p,encoding='utf-8'))['entries']) for p in glob.glob('data/dialect/*.json')})"` |
-| 静态资源缓存 | 静态资源带 `?v=数据集版本-u<序号>` 缓存参数（当前 1.1.0-u14），改 web/ 源文件就递增序号 | `grep -o 'v=1.1.0-u[0-9]*' web/index.html` |
-| 数据集版本 | 1.1.0（`data/VERSION`，演进见 `HISTORY.md`，引用见 `CITATION.cff`） | `cat data/VERSION` |
+| 静态资源缓存 | 静态资源带 `?v=数据集版本-u<序号>` 缓存参数（当前 1.1.1-u14），改 web/ 源文件或随数据更新递增序号 | `grep -o 'v=1.1.1-u[0-9]*' web/index.html` |
+| 数据集版本 | 1.1.1（`data/VERSION`，演进见 `HISTORY.md`，已发布版引用见 `CITATION.cff`） | `cat data/VERSION` |
 | 标准登记表 | 23 条编号与名称对应 | `python scripts/validate.py`（读 `STANDARDS_REGISTRY`） |
 | 标准依据覆盖 | 158/866（18.2%），分文件报表 | `python scripts/validate.py --coverage` |
 | 第三方依赖 | 无（Python 只用标准库；`web_check.py` 的句子回归另需 node，缺了会跳过并提示） | `python scripts/run_all.py` |

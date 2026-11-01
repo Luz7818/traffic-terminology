@@ -77,7 +77,7 @@
 {"id": "FWY-0077", "term_zh": "交通广播", "term_en": "traffic radio broadcast", "category": "高速公路", "definition": "以广播频道发布路况与管制信息的服务。", "colloquial": ["交通台", "路况广播"], "related": ["可变情报板", "出行者信息系统"]}
 {"id": "FWY-0078", "term_zh": "高速巡检", "term_en": "freeway patrol", "category": "高速公路", "definition": "对路段设施与交通状态的巡查检视工作。", "colloquial": ["路巡", "巡查车"], "related": ["交通事件", "养护工区"]}
 {"id": "FWY-0079", "term_zh": "路政管理", "term_en": "highway administration", "category": "高速公路", "definition": "保护路产、维护路权及管理通行秩序的行政管理职能。", "colloquial": ["路政", "路政执法"], "related": ["超限运输", "非法超限超载治理"]}
-{"id": "FWY-0080", "term_zh": "充电站", "term_en": "charging station", "category": "高速公路", "definition": "服务区内为电动汽车提供充电服务的设施。", "colloquial": ["服务区充电", "充电桩"], "related": ["服务区"], "disambiguation": "「充电桩」位于高速公路服务区、成片大功率集中充电的场站时用本词条；城市路内或停车场里单根可扫码的桩用 SAFE-0107 充电桩。"}
+{"id": "FWY-0080", "term_zh": "充电站", "term_en": "charging station", "category": "高速公路", "definition": "服务区内为电动汽车提供充电服务的设施。", "colloquial": ["服务区充电"], "related": ["服务区"], "disambiguation": "「充电桩」位于高速公路服务区、成片大功率集中充电的场站时用本词条；城市路内或停车场里单根可扫码的桩用 SAFE-0107 充电桩。"}
 {"id": "FWY-0081", "term_zh": "货车停车区", "term_en": "truck parking area", "category": "高速公路", "definition": "为货车司机停车休息规划的专用区域，缓解疲劳驾驶。", "colloquial": ["大车停车区", "司机休息区"], "related": ["停车区", "疲劳驾驶"]}
 {"id": "FWY-0082", "term_zh": "疲劳驾驶提示", "term_en": "fatigue driving alert", "category": "高速公路", "definition": "以门架与视频分析识别长时间驾驶并提示休息的管理措施。", "colloquial": ["开车超4小时提醒", "开太久提醒你歇会儿", "连着开四小时就报警"], "related": ["疲劳驾驶", "货车停车区"]}
 {"id": "FWY-0083", "term_zh": "车道数", "term_en": "number of lanes", "category": "高速公路", "definition": "主线单向或双向行车道的数量，是通行能力的基本参数。", "colloquial": ["双向几车道", "几车道高速"], "related": ["通行能力", "改扩建工程"]}
