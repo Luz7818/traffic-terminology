@@ -13,7 +13,7 @@
 | `index.html` | 页面骨架：两个标签页（口语转换 / 术语库）、统计条、示例按钮、弹窗容器 | 只引本地三个文件，无 CDN、无网络请求 |
 | `style.css` | 全部样式 | 约 26 KB |
 | `app.js` | 全部逻辑，包在一个 IIFE 里 | 匹配实现与 `scripts/query.py` 各写一份，见「别动」 |
-| `data.js` | 词条与匹配词典 | **脚本产物**，由 `python scripts/build_web.py` 生成，约 322 KB，勿手改 |
+| `data.js` | 词条与匹配词典 | **脚本产物**，由 `python scripts/build_web.py` 生成，约 324 KB，勿手改 |
 
 ## app.js 内部结构
 
@@ -29,7 +29,7 @@
 | `smooth(text)` | 替换完跑一遍 `SMOOTH_RULES` 字面平滑规则（「根本因」→「因」这类残句修补） |
 | `toConverted(segments)` | 逐段替换 + 平滑，得到「术语化改写」全文；复制按钮复制的就是它 |
 | `renderDemo()` | 渲染输入卡下方的「示例对比」卡片（`DEMO_SENTENCES` 三句，口语琥珀高亮 → 术语绿色高亮，由真实引擎实时算出，不手写结果）；点击整卡即填入输入框并转换 |
-| `setRegion(code)` / `renderRegions()` | 方言对照层：`setRegion` 切换地区（存 `localStorage` 键 `tt_region`），扫描时把该地区 `data.js` 的 `dialects.<code>.phrases` 叠加进最长优先匹配（主库键优先）；`renderRegions` 画「通用/江苏/河南」选择 chips，切换后重渲示例、方言面板并重转换 |
+| `setRegion(code)` / `renderRegions()` | 方言对照层：`setRegion` 切换地区（存 `localStorage` 键 `tt_region`），扫描时把该地区 `data.js` 的 `dialects.<code>.phrases` 叠加进最长优先匹配（主库键优先）；`renderRegions` 画「通用 + 6 地区」选择 chips（共 7 个，随 `data.js` 的 `dialects` 生成），切换后重渲示例、方言面板并重转换 |
 | `renderDialectPanel()` | 术语库视图顶部的「方言对照」面板：**面板头部自带地区切换 chips**（与转换页同一状态、双向联动），选中地区列出该地区方言说法（紫色虚线标记 + 出处备注）→ 标准术语，点击行打开词条详情弹窗；「通用」时按地区分组列出全部并提示「通用已含全部地区」 |
 | 转换结果的方言标记 | 结果含方言命中时，标题旁显示「<地区>方言 ×N」徽标，与原文对照里的紫色虚线一一对应 |
 | `maskForScan(text)` 同节的 `MASK_TERMS` | 现在只掩码「电动车」；「电瓶车」不再掩码（江苏方言层要匹配它，且其内部没有可误配的键） |

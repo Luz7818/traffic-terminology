@@ -42,7 +42,7 @@ python scripts/query.py 红绿灯路口          # 单个说法
 python scripts/query.py 加塞 -v             # -v 追打定义、关联词、国标
 python scripts/query.py green wave          # 英文也能查
 python scripts/query.py 信号                # 部分匹配，按匹配度降序列出
-python scripts/query.py --check             # 跑 26 条固定回归用例
+python scripts/query.py --check             # 跑 27 条固定回归用例
 ```
 
 `-v` 的输出样子：
@@ -135,7 +135,7 @@ python scripts/run_all.py
 python scripts/run_all.py
 ```
 
-它包含 26 条查询回归（断言"典型口语的首选命中不变"）与网页回归——后者逐键比对
+它包含 27 条查询回归（断言"典型口语的首选命中不变"）与网页回归——后者逐键比对
 `web/data.js` 的候选顺序与 CLI 分值，并用 node 加载真实的 `web/app.js` 跑 36 条
 句子转换用例。只改 `web/app.js` 时 `query.py --check` 不会报错，务必让
 `web_check.py`（run_all 已包含）也通过，再手动点一遍页面。

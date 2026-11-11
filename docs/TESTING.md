@@ -8,7 +8,7 @@
 | 层 | 管什么 | 入口 |
 |---|---|---|
 | 数据校验 | 结构、方言层、候选池、标准登记表 | `python scripts/validate.py` |
-| 查询回归 | 26 条 CLI 用例 | `python scripts/query.py --check` |
+| 查询回归 | 27 条 CLI 用例 | `python scripts/query.py --check` |
 | 网页回归 | 消歧一致（匹配键候选顺序 == CLI 分值排序）+ 句子转换 36/36（node 真跑 `web/app.js`） | `python scripts/web_check.py` |
 | 总门禁 | 以上全部 + 重建索引与网页数据 | `python scripts/run_all.py` |
 

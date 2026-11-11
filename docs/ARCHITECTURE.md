@@ -68,7 +68,7 @@ data/*.jsonl（唯一手工编辑对象）
           ├── scripts/build_index.py   重建 Skill 反向索引
           ├── scripts/build_web.py     重建 web/data.js（产物，无时间戳）
           ├── scripts/query.py         CLI 查询（子串匹配）
-          └── scripts/run_all.py       总门禁：校验→重建→26 条查询回归→网页回归
+          └── scripts/run_all.py       总门禁：校验→重建→27 条查询回归→网页回归
 web/app.js：独立的网页匹配实现（精确键、最长优先），候选排序共用 corpus.score() 口径
 skill/traffic-terminology/references/：脚本产物，可脱离 data/ 独立使用
 ```
