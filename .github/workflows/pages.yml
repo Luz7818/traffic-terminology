@@ -19,6 +19,24 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      # run_all 五段：validate / build_index / build_web / query 回归 / web_check。
+      # ubuntu-latest 预装 node，web_check 的句子转换回归走真实 node 路径而非 SKIP
+      # （web_check.py 对 SKIP 返回 0，无 node 会「算过」——W2 在此钉死）。
+      - name: run_all 全量门禁
+        run: python scripts/run_all.py
+      # run_all 重建 web/data.js 与 skill/references 后与提交产物比对：
+      # 有 diff = 提交里带着过期 data.js（W1）或 skill 静默少库（W3），直接红。
+      # --ignore-cr-at-eol：.gitattributes 是「* -text」（刻意不归一化），提交产物为 CRLF，
+      # 而 Linux 上 Python 重建写 LF——裸 diff 会整文件假红；忽略行尾 CR 后只看内容漂移。
+      - name: 产物一致性断言
+        run: git diff --exit-code --ignore-cr-at-eol web/data.js skill/
   build:
     runs-on: ubuntu-latest
     steps:
@@ -32,7 +50,7 @@ jobs:
         with:
           path: web
   deploy:
-    needs: build
+    needs: [check, build]
     runs-on: ubuntu-latest
     environment:
       name: github-pages
