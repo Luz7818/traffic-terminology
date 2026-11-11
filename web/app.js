@@ -389,6 +389,8 @@
         chip.addEventListener('click', function () {
           switchTab('browse');
           searchInput.value = rname;
+          state.q = rname;      // 程序化赋值不触发 input 事件，必须同步 state.q（对齐弹窗路径）
+          state.shown = PAGE;   // 重置分页，与弹窗路径同款（TR4-1）
           doSearch();
         });
         rel.appendChild(chip);
