@@ -104,7 +104,7 @@
 | 标准登记表 | 23 条编号与名称对应 | `python scripts/validate.py`（读 `STANDARDS_REGISTRY`） |
 | 标准依据覆盖 | 158/866（18.2%），分文件报表 | `python scripts/validate.py --coverage` |
 | 第三方依赖 | 无（Python 只用标准库；`web_check.py` 的句子回归另需 node，缺了会跳过并提示） | `python scripts/run_all.py` |
-| CI | 只有一个发布工作流：推 `main`（过渡期 `master` 也触发）把 `web/` 原样发到 GitHub Pages（无构建步骤）。数据与回归门禁仍只在本地跑。**这里不写"最近一次是哪个提交"**——分支每推一次它就变，写进文档同一次提交里就作废了；当前分支 HEAD 的徽章为 `passing`（复核见右）。历史上发布失败有两类：首次是 Pages 未在仓库设置里开启，已由 workflow 里的 `enablement: true` 自助开启；2026-10-05 起是 `github-pages` 环境部署分支策略只放行 `master`、推 `main` 全被拒，2026-10-12 补 `main` 恢复（根因与症状见 `docs/ARCHITECTURE.md` 关键约定 11 与 `docs/GIT.md`）。本机没有 `gh`，但徽章与 Actions 接口对**公开仓都免认证**；URL 里用仓库名 `traffic-terminology`，不是目录名（后者 404）。要提交号再用 `/actions/runs`（匿名限 60 次/小时/IP） | `python -c "import urllib.request as u;b=u.urlopen(u.Request('https://github.com/Luz7818/traffic-terminology/workflows/Deploy%20to%20GitHub%20Pages/badge.svg',headers={'User-Agent':'Mozilla/5.0'}),timeout=30).read().decode();print('passing' in b)"` 应为 `True`；另 `ls .github/workflows`、`python scripts/run_all.py` |
+| CI | 只有一个工作流：推 `main`（过渡期 `master` 也触发）先跑 `check` job——`python scripts/run_all.py` 全量门禁 + 重建产物与提交内容的一致性断言（`git diff --exit-code --ignore-cr-at-eol web/data.js skill/`，忽略行尾 CR 防 CRLF 假红）——通过后 `build`/`deploy` 才把 `web/` 原样发到 GitHub Pages（发布本身无构建步骤）。同一门禁本地与 CI 各跑一遍。**这里不写"最近一次是哪个提交"**——分支每推一次它就变，写进文档同一次提交里就作废了；当前分支 HEAD 的徽章为 `passing`（复核见右）。历史上发布失败有两类：首次是 Pages 未在仓库设置里开启，已由 workflow 里的 `enablement: true` 自助开启；2026-10-05 起是 `github-pages` 环境部署分支策略只放行 `master`、推 `main` 全被拒，2026-10-12 补 `main` 恢复（根因与症状见 `docs/ARCHITECTURE.md` 关键约定 11 与 `docs/GIT.md`）。本机没有 `gh`，但徽章与 Actions 接口对**公开仓都免认证**；URL 里用仓库名 `traffic-terminology`，不是目录名（后者 404）。要提交号再用 `/actions/runs`（匿名限 60 次/小时/IP） | `python -c "import urllib.request as u;b=u.urlopen(u.Request('https://github.com/Luz7818/traffic-terminology/workflows/Deploy%20to%20GitHub%20Pages/badge.svg',headers={'User-Agent':'Mozilla/5.0'}),timeout=30).read().decode();print('passing' in b)"` 应为 `True`；另 `ls .github/workflows`、`python scripts/run_all.py` |
 | 在线演示 | https://luz7818.github.io/traffic-terminology/ （项目页路径由仓库名决定，不是 `/corpus/`） | `curl -s -o /dev/null -w '%{http_code}' https://luz7818.github.io/traffic-terminology/data.js` 得 200 |
 | 网页口语匹配键数 | 2211 个（去括注后去重口径）；含标准术语的总匹配键 3003 个 | `python scripts/web_check.py`（打印总数） |
 | 原始口语去重数 | 2215 条（另一口径，见 `docs/ARCHITECTURE.md` 数据组织方式） | `python scripts/build_index.py` |
@@ -120,7 +120,7 @@
 - 仓库根 `Project/` 不是 git 仓库，`Traffic_terminology/` 自身才是；同级还有多个互不关联的仓库。
 - 网页消歧是"按 CLI 分值排序后的首候选"，仍不看上下文；句中改写有 `surface` +
   `SMOOTH_RULES` 两层兜底，长句仍可能不顺——有回归锁定，改行为请连用例一起改。
-- 「电动车」「电瓶车」在网页扫描里被掩码（`MASK_TERMS`）：内部的「动车」等键不参与匹配。
+- 「电动车」在网页扫描里被掩码（`MASK_TERMS`，现仅此一词：「电瓶车」已移出掩码表——江苏方言层要匹配它，且其内部没有可误配的键）：内部的「动车」等键不参与匹配。
   新增掩码词要同步 `web_check.py` 用例。
 - CLI 查询会做子串匹配，可能命中不带该匹配键的词条；网页只按精确键扫描。两侧排序口径已
   统一，但极端子串场景下候选集合仍可能不同，属已知设计取舍。

@@ -20,8 +20,11 @@
 
 ## CI 与发布
 
-- `.github/workflows/pages.yml`：推 `main`（过渡期 `master` 也触发）把 `web/` 原样发到
-  GitHub Pages，**无构建步骤**；改名或加构建要同步改 workflow 的 `path`。
+- `.github/workflows/pages.yml`：推 `main`（过渡期 `master` 也触发）触发两段——`check`
+  跑 `python scripts/run_all.py` 全量门禁，并断言重建产物与提交内容一致
+  （`git diff --exit-code --ignore-cr-at-eol web/data.js skill/`，忽略行尾 CR 防 CRLF 假红）；
+  `build` 把 `web/` 目录原样当 artifact 上传，**无构建步骤**；`deploy` 依赖两者。
+  改名或加构建要同步改 workflow 的 `path`。
 - Pages 需在仓库 Settings 人工开启一次（workflow token 开不了）；判据是
   `curl -s -o /dev/null -w '%{http_code}' https://luz7818.github.io/traffic-terminology/`
   得 200，不是 `/pages` API（未登录恒 404）。

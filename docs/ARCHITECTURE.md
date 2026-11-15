@@ -81,7 +81,8 @@ skill/traffic-terminology/references/：脚本产物，可脱离 data/ 独立使
   资源（`../assets/…` 之类，副本拿不到）；**访问 URL 必须以 `/` 结尾**（相对引用在少斜杠
   路径下基准变站点根，三个资源全 404）。收录方 luzzz.me 用 `trailingSlash: true` 配合。
 - **Pages 发布**：`web/` 是零构建静态目录，workflow 直接把目录当 artifact 上传，没有
-  `npm run build`；改名或加构建步骤要同步改 `.github/workflows/pages.yml` 的 `path`。
+  `npm run build`；`deploy` 前置 `check` job（跑 `run_all.py` 门禁与产物一致性断言）。
+  改名或加构建步骤要同步改 `.github/workflows/pages.yml` 的 `path`。
 
 ## 子目录说明索引
 
@@ -111,7 +112,8 @@ skill/traffic-terminology/references/：脚本产物，可脱离 data/ 独立使
 10. **`web/` 是 luzzz.me 的复制源**——冻结路径：目录名 + `index.html/style.css/app.js/data.js`
     四文件名被 `luzzz.me/tools/sync-showcases.mjs` 逐字引用；动了源必须到 luzzz.me 重跑
     `pnpm sync:showcases && pnpm build` 并核对子页面。
-11. **Pages 三个不显然的点**——workflow 无构建步骤；Pages 必须在仓库 Settings 人工开启一次
+11. **Pages 三个不显然的点**——发布的 `build`/`deploy` 无构建步骤（发布门禁是前置的 `check`
+    job：`run_all.py` 全量门禁 + 产物 diff 断言，挂了不部署）；Pages 必须在仓库 Settings 人工开启一次
     （token 开不了，`enablement: true` 也会报 Resource not accessible）；`github-pages` 环境
     的部署分支策略必须包含当前默认分支——2026-10 master→main 迁移后策略只放行 `master`，
     推 `main` 全部被环境门禁拒绝（deploy 作业零步骤失败、无日志、日志 API 报 BlobNotFound），
